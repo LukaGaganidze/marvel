@@ -1,0 +1,312 @@
+.creators-container {
+  max-width: var(--container-width);
+  margin: var(--container-center);
+}
+
+/* HEADING */
+.creators-hero {
+  padding: 4rem 0;
+  max-width: var(--container-width);
+  margin: var(--container-center);
+}
+
+.creators-heading {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  width: fit-content;
+}
+
+.creators-heading-main {
+  font-family: "Nothing You Could Do", cursive;
+  font-size: 5rem;
+  font-weight: 100;
+  letter-spacing: 3px;
+  background-color: var(--main-color-pink);
+  color: var(--white-1);
+  width: fit-content;
+  padding: 0 1.5rem;
+
+  animation-name: fromLeft;
+  animation-duration: 1s;
+  transform: translateX(-3rem);
+}
+.creators-heading-sec {
+  font-weight: 100;
+  font-size: 2.3rem;
+  text-align: center;
+  letter-spacing: 3px;
+  color: #222222ce;
+
+  animation-name: fromRight;
+  animation-duration: 1s;
+  transform: translateX(10rem);
+}
+
+@keyframes fromLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-6rem);
+  }
+  80% {
+    transform: translateX(2rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(-3rem);
+  }
+}
+@keyframes fromRight {
+  0% {
+    opacity: 0;
+    transform: translateX(6rem);
+  }
+  80% {
+    transform: translateX(-2rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(10rem);
+  }
+}
+
+/* Z PATTERN */
+.creators-z-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.creators-z {
+  display: flex;
+  margin-bottom: var(--margin-large);
+  position: relative;
+}
+
+/* IMAGES */
+.creators-z-img-box {
+  max-width: 50rem;
+  height: 70rem;
+}
+
+.creators-z-img-box img {
+  max-width: 100%;
+  height: 100%;
+}
+
+/* text */
+.creators-z-text-box {
+  max-width: 50rem;
+  background-image: linear-gradient(
+      to bottom,
+      rgba(230, 230, 230, 0.9),
+      rgba(230, 230, 230, 0.9)
+    ),
+    url("../../assets/covers/cover-6.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  clip-path: polygon(0 7%, 100% 0, 100% 93%, 0 100%);
+  padding: 10rem 2rem;
+  position: relative;
+}
+
+.creators-z-text-heading {
+  font-family: "Nothing You Could Do", cursive;
+  color: var(--main-color-pink);
+  font-size: 5rem;
+  transform: translateY(-4rem);
+}
+
+.creators-spider,
+.creators-hulk {
+  opacity: 0;
+  transform: translateY(2rem);
+  transition: all 0.6s;
+}
+.creators-spider.active-cr,
+.creators-hulk.active-cr {
+  opacity: 1;
+  transform: translateY(0rem);
+}
+
+/* CARDS */
+
+.creator-cards {
+  display: flex;
+  justify-content: space-around;
+  transform: translateY(-3rem);
+  list-style: none;
+}
+
+.creator-cards-link {
+  transition: all 0.4s;
+}
+.creator-cards-link:link,
+.creator-cards-link:visited {
+  display: block;
+  text-decoration: none;
+  font-family: inherit;
+}
+.creator-cards-link:hover,
+.creator-cards-link:active {
+  transform: translateY(-0.6rem) scale(1.03);
+}
+
+/* origins */
+
+.char--origins {
+  position: absolute;
+  bottom: 5rem;
+  left: 2rem;
+  max-width: 49rem;
+  padding: 5rem 0 3rem 0;
+  font-size: 1.8rem;
+}
+
+.char--origins-heading {
+  position: absolute;
+  bottom: 4rem;
+  font-size: 2rem;
+  letter-spacing: 0.5px;
+  left: 2rem;
+  height: max-content;
+  padding: 1rem;
+}
+.heading-p {
+  color: var(--main-color-pink);
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+.heading-span {
+  display: inline-block;
+  color: #333;
+}
+.optional-heading {
+  display: none;
+}
+/* MEDIA QUERIES */
+
+@media (max-width: 1080px) {
+  .creators-heading {
+    transform: scale(0.8);
+  }
+  .creators-z {
+    display: flex;
+    flex-direction: column;
+  }
+  .creators-z-text-heading {
+    transform: scale(0.8) translateY(-5rem);
+  }
+  .creators-deadoool {
+    flex-direction: column-reverse;
+  }
+  .creators-hulk {
+    flex-direction: column-reverse;
+  }
+  .creator-cards {
+    margin-bottom: 2rem;
+  }
+}
+
+@media (max-width: 760px) {
+  .creators-heading-main {
+    font-size: 4rem;
+  }
+  .creators-heading-sec {
+    font-size: 2rem;
+  }
+  .creators-heading {
+    transform: scale(0.6);
+  }
+}
+
+@media (max-width: 630px) {
+  .creators-z-img-box {
+    align-self: center;
+  }
+
+  .creators-heading-main {
+    font-size: 3rem;
+  }
+  .creators-heading-sec {
+    font-size: 1.4rem;
+  }
+}
+@media (max-width: 525px) {
+  .creators-hero {
+    padding: 2rem 0;
+  }
+  .creators-z-img-box {
+    display: none;
+  }
+  .creators-heading {
+    display: none;
+  }
+  .optional-heading {
+    display: block;
+    background-color: var(--main-color-pink);
+    color: var(--white-1);
+    width: max-content;
+    margin: 0 auto;
+    font-size: 4rem;
+    padding: 0 1rem;
+    margin-bottom: var(--margin-mid);
+  }
+  .creators-z-container {
+    width: 100%;
+  }
+
+  .creators-z {
+    width: 100%;
+  }
+}
+
+@media (max-width: 500px) {
+  .creators-container {
+  }
+  .creators-z-text-heading {
+    font-size: 3.2rem;
+  }
+  .creators-z-text-box {
+    padding-bottom: 15rem;
+  }
+}
+@media (max-width: 450px) {
+  .char--origins-heading {
+    bottom: 7rem;
+  }
+  .creators-z-text-box {
+    padding-bottom: 15rem;
+  }
+  .char--origins-heading {
+  }
+  .heading-p {
+    font-size: 1.8rem;
+  }
+  .heading-span {
+    font-size: 1.4rem;
+  }
+  .creator-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media (max-width: 330px) {
+  .creators-z-text-box {
+    padding-bottom: 12rem;
+  }
+  .heading-p {
+    font-size: 1.6rem;
+  }
+  .heading-span {
+    font-size: 1.2rem;
+  }
+  .optional-heading {
+    font-size: 3rem;
+    width: 100%;
+    text-align: center;
+  }
+}

@@ -1,0 +1,126 @@
+.chars-sec {
+  max-width: var(--container-width);
+  margin: var(--container-center);
+  margin-bottom: var(--margin-section);
+}
+
+.characters-card-box {
+  display: flex;
+  gap: 5rem;
+  justify-content: space-between;
+}
+
+.characters-list {
+  list-style: none;
+}
+
+/* video */
+.char-video-desc-box {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+
+  margin-top: var(--margin-large);
+  gap: 2rem;
+
+  transform: translateY(10rem);
+  opacity: 0;
+}
+
+.chat-text-heading {
+  font-size: var(--font-size-large);
+  margin-bottom: var(--margin-small);
+}
+.chat-text-date-time {
+  margin-bottom: var(--margin-inner-text-small);
+}
+.chat-text-desc {
+  margin-bottom: var(--margin-inner-text-large);
+}
+.chat-text-details {
+  display: flex;
+  flex-direction: column;
+  gap: var(--margin-inner-text-small);
+}
+
+.chat-text-details-inner-box span:first-child {
+  display: inline-block;
+  width: 10rem;
+  font-weight: 700;
+  color: var(--color-black-light);
+}
+.chat-text-details-inner-box span:not(:first-child) {
+  color: var(--white-3);
+}
+
+.char-video-desc-box.fadeIn {
+  transition: all 1s;
+  transform: translateY(0);
+  opacity: 1;
+}
+/* OPTIONAL HEADING */
+.mobile-heading {
+  display: none;
+}
+/* MEDIA QUERIES */
+
+@media (max-width: 1250px) {
+  .chars-sec {
+    padding: 0 1rem;
+  }
+}
+@media (max-width: 1150px) {
+  .char-video-desc-box {
+    grid-template-columns: 1fr;
+    justify-items: center;
+  }
+  .chat-text-box {
+    max-width: 80%;
+    margin: 0 auto;
+    padding: 0 2rem;
+  }
+}
+
+@media (max-width: 1050px) {
+  .characters-card-box {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+  }
+}
+@media (max-width: 650px) {
+  .chars-sec {
+    margin-bottom: var(--margin-large);
+  }
+  .char-video-desc-box {
+    display: none;
+  }
+}
+@media (max-width: 500px) {
+  .characters-card-box {
+    grid-template-columns: 1fr;
+  }
+  .chars-sec {
+    margin-bottom: var(--margin-mid);
+    padding: 0;
+  }
+  .characters-card-box {
+    gap: 2rem;
+  }
+  .mobile-heading {
+    display: block;
+    width: 100%;
+    text-align: center;
+    font-size: 3rem;
+    background-color: var(--main-color-pink);
+    color: var(--white-1);
+    letter-spacing: 2px;
+    margin-bottom: 1rem;
+  }
+}
+
+@media (max-width: 280px) {
+  .mobile-heading {
+    font-size: 2.4rem;
+  }
+}

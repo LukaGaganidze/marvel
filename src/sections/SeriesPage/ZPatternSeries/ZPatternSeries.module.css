@@ -1,0 +1,86 @@
+.z-pattern-container {
+  position: relative;
+  overflow: hidden;
+}
+
+/* BACKGROUND */
+.z-pattern-bacground {
+  background-image: url("../../../assets/series/serieshome/afterFeatures/background.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top;
+  opacity: 0.4;
+  filter: grayscale(50%) blur(5px);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -2;
+
+  width: 100%;
+  height: 100%;
+  scale: 1.05;
+}
+
+/* animating */
+
+.z-item {
+  width: max-content;
+  margin: 0 auto;
+  opacity: 0;
+  transition: all 0.8s;
+}
+.z-item-1 {
+  margin-top: 21rem;
+  transform: translateX(-10rem);
+}
+.z-item-2 {
+  transform: translateX(10rem);
+}
+.visible {
+  opacity: 1;
+  transform: translateX(0%);
+}
+.optional-heading {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.optional-series-heading {
+  font-family: serif;
+  display: block;
+  font-size: 3.6rem;
+  font-family: "Nothing You Could Do", cursive;
+  color: var(--main-color-pink);
+  letter-spacing: 2px;
+}
+/* MEDIA QUERIES */
+
+@media (max-width: 1320px) {
+  .z-item-1 {
+    margin-top: 40rem;
+  }
+}
+
+@media (max-width: 705px) {
+  .z-item-1 {
+    margin-top: 65rem;
+  }
+}
+
+@media (max-width: 470px) {
+  .optional-series-heading {
+    text-align: center;
+    font-size: 3.2rem;
+  }
+  .z-item-1 {
+    margin-top: 140rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .optional-series-heading {
+    text-align: center;
+    font-size: 2.2rem;
+  }
+}

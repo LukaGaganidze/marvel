@@ -1,0 +1,15 @@
+.heading {
+  margin: var(--container-center);
+  width: var(--container-width);
+
+  font-size: 7rem;
+  color: var(--main-color-pink);
+  letter-spacing: 3px;
+  margin-top: 2rem;
+  margin-bottom: 4rem;
+}
+.heading span:first-child {
+  color: #333;
+  letter-spacing: 1px;
+  font-size: 5rem;
+}

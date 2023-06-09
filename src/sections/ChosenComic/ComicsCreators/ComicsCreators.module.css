@@ -1,0 +1,6 @@
+.characters-container {
+  margin: var(--container-center);
+  width: var(--container-width);
+  margin-top: var(--margin-mid);
+  margin-bottom: var(--margin-large);
+}

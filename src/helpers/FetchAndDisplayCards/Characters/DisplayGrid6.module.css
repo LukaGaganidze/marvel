@@ -1,0 +1,45 @@
+.container-marg {
+  width: var(--container-width);
+  margin: var(--container-center);
+  margin-bottom: var(--margin-large);
+  position: relative;
+}
+
+.characters-container {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  justify-items: center;
+  row-gap: 2rem;
+}
+
+/* button */
+.btn-box {
+  margin: var(--container-center);
+  width: var(--container-width);
+  text-align: center;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+
+  position: absolute;
+  bottom: -8rem;
+}
+.btn-box button {
+  border: none;
+
+  background-color: var(--color-pink-dark);
+  padding: 1rem 2rem;
+  cursor: pointer;
+  color: var(--white-1);
+  font-size: 1.4rem;
+
+  clip-path: polygon(10% 0%, 100% 0, 100% 70%, 90% 100%, 0% 100%, 0 30%);
+
+  transition: all 0.3s;
+}
+.btn-box button:hover {
+  transform: translateY(-0.3rem);
+  background-color: var(--main-color-pink);
+}
+.btn-box button:active {
+  transform: translateY(0.1rem);
+}

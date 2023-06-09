@@ -1,0 +1,84 @@
+.featured-comics-container {
+  margin: var(--container-center);
+  max-width: var(--container-width);
+
+  margin-top: var(--margin-large);
+  margin-bottom: var(--margin-section);
+}
+
+.featured-comics-heading {
+  font-family: "Nothing You Could Do", cursive;
+  letter-spacing: 5px;
+  grid-column: 1 / -1;
+  font-size: 5rem;
+  margin-bottom: var(--margin-small);
+
+  color: var(--main-color-pink);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateX(-5rem);
+  transition: all 0.8s;
+}
+.optional-heading {
+  display: none;
+}
+
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  row-gap: 8rem;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10rem);
+  transition: all 0.8s;
+}
+
+.featured-comics-heading.active-header {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(0rem);
+}
+.active-cards {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0rem);
+}
+/* MEDIA QUERIS */
+
+@media (max-width: 1050px) {
+  .featured-comics-container {
+    padding: 0 1rem;
+    margin-bottom: 5rem;
+  }
+
+  .featured-comics-heading {
+    font-size: 3.2rem;
+  }
+  .card-container {
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+  }
+}
+
+@media (max-width: 805px) {
+  .card-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 555px) {
+  .card-container {
+    grid-template-columns: repeat(1, 1fr);
+    row-gap: 2rem;
+  }
+  .featured-comics-heading {
+    display: none;
+  }
+  .optional-heading {
+    display: block;
+    font-family: "Nothing You Could Do", cursive;
+    text-align: center;
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    color: var(--main-color-pink);
+  }
+}

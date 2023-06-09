@@ -1,0 +1,49 @@
+.searched-char-card {
+  width: 16rem;
+  transition: all 0.4s;
+  cursor: pointer;
+}
+.searched-char-img-box {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+.searched-char-img {
+  width: 100%;
+  height: 100%;
+  transition: all 0.4s;
+}
+.searched-char-text-box {
+  color: #fff;
+  transform: translateY(-0.5rem);
+  border: solid var(--main-color-pink) 3px;
+  border-top: none;
+  background-color: var(--main-color-pink);
+  padding: 1rem;
+  clip-path: polygon(0 0, 100% 0, 100% 75%, 85% 100%, 0 100%);
+
+  transition: clip-path 1s;
+}
+.char-name {
+  font-size: 1.8rem;
+  height: 10rem;
+  overflow: scroll;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+}
+.char-name::-webkit-scrollbar {
+  display: none;
+}
+
+.searched-char-card:hover {
+  transform: translateY(-1.4rem);
+}
+.searched-char-card:hover .searched-char-img {
+  transform: scale(1.1);
+}
+.ind-char-link:link,
+.ind-char-link:visited {
+  text-decoration: none;
+  color: #fff;
+}

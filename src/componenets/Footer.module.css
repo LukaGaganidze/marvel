@@ -1,0 +1,132 @@
+.footer-sec {
+  height: 30rem;
+  max-width: 100%;
+  background-color: var(--color-black-light);
+
+  position: relative;
+  overflow: hidden;
+  margin-top: var(--margin-section);
+}
+
+/* images */
+.friendly-neigbourhood {
+  position: absolute;
+  height: 95%;
+  right: 0;
+  bottom: 0;
+  opacity: 0.3;
+}
+.venom {
+  position: absolute;
+  height: 95%;
+  left: 0;
+  bottom: 0;
+  opacity: 0.3;
+}
+
+/* content */
+
+.footer-content {
+  height: 100%;
+  width: var(--container-width);
+  margin: var(--container-center);
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  color: var(--white-1);
+}
+
+.footer-sub-heder {
+  font-size: 2.2rem;
+  margin-bottom: 2.2rem;
+  font-weight: 200;
+}
+
+/* about */
+.footer-about {
+  padding: 2rem 3rem;
+  height: 100%;
+  line-height: 25px;
+}
+
+/* tools */
+.footer-tools {
+  padding: 2rem 3rem;
+  text-align: center;
+}
+
+.tool-box {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  row-gap: 3rem;
+  justify-items: center;
+}
+.tool-img {
+  width: 6rem;
+  height: 6rem;
+}
+
+.tool {
+  display: block;
+  border-radius: 50%;
+  overflow: hidden;
+  width: 6rem;
+  height: 6rem;
+}
+
+/* api */
+
+.footer-api {
+  padding: 2rem 3rem;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 12rem;
+}
+.footer-api p {
+  text-align: end;
+  font-size: 1.6rem;
+}
+/* MEDIA QUERIES */
+
+@media (max-width: 1250px) {
+  .footer-content {
+    width: 100%;
+  }
+}
+@media (max-width: 1150px) {
+  .footer-sec {
+    height: auto;
+  }
+  .footer-content {
+    width: 100%;
+    height: 50rem;
+  }
+  .footer-about {
+    grid-column: 1 / -1;
+  }
+}
+@media (max-width: 880px) {
+  .friendly-neigbourhood,
+  .venom {
+    display: none;
+  }
+}
+@media (max-width: 850px) {
+  .footer-api {
+    gap: 0rem;
+  }
+}
+@media (max-width: 760px) {
+  .footer-sec {
+    overflow: visible;
+  }
+  .footer-content {
+    grid-template-columns: 1fr;
+  }
+  .footer-about {
+    grid-column: 1 / 2;
+  }
+  .footer-api {
+    background-color: var(--color-black-light);
+  }
+}

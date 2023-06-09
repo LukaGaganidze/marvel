@@ -1,0 +1,41 @@
+.FeaturedSeriesCard {
+  transition: all 0.4s;
+}
+
+.FeaturedSeriesCard:link,
+.FeaturedSeriesCard:visited {
+  color: var(--white-1);
+  text-decoration: none;
+  width: 20rem;
+
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+.FeaturedSeriesCard:hover,
+.FeaturedSeriesCard:active {
+  transform: translateY(-1.5rem);
+  backface-visibility: visible;
+}
+
+/* img box */
+.img-box {
+  width: 20rem;
+  height: 15.8rem;
+  overflow: hidden;
+}
+.img-box img {
+  width: 100%;
+}
+
+/* text box */
+.text-box {
+  background-color: #eb5054;
+  text-align: center;
+  padding: 1rem;
+  transition: all 0.4s;
+}
+/*  */
+.FeaturedSeriesCard:hover .text-box,
+.FeaturedSeriesCard:active .text-box {
+  background-color: var(--main-color-pink);
+}

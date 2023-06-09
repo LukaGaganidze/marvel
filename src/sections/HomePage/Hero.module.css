@@ -1,0 +1,179 @@
+/* SECTION BACKGROUND IMAGE */
+.hero-section {
+  width: 100%;
+  height: 65vh;
+  background-size: cover;
+  background-position: center;
+  opacity: 0.8;
+
+  background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)),
+    url("../../assets/covers/cover-5.jpg");
+
+  position: relative;
+  margin-bottom: var(--margin-section);
+
+  animation-name: fade-in;
+  animation-duration: 3s;
+  opacity: 1;
+}
+
+/* TEXT CONTAINER */
+.text-container {
+  overflow: hidden;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+
+  height: 50vh;
+  width: var(--container-width);
+  margin: var(--container-center);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  animation-name: move-in;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-timing-function: ease-out;
+  animation-timing-function: ease-out;
+}
+
+/* ALTERNATIVE HEADING */
+.alternative-text {
+  display: flex;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  display: none;
+}
+.alternative-text h1 {
+  font-family: "Nothing You Could Do", cursive;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--white-1);
+}
+.heading-text-optional-highlited {
+  background: linear-gradient(
+    to right,
+    var(--main-color-pink),
+    var(--color-pink-dark)
+  );
+  font-family: "PT Sans", sans-serif;
+  width: 16rem;
+  clip-path: polygon(0 0, 100% 0, 90% 100%, 0 100%, 10% 0);
+
+  text-align: center;
+}
+
+/* HEADING WITH INFINITE ANIMATION */
+.text-container h1 {
+  margin: 0;
+  font-size: 6rem;
+  color: rgba(225, 225, 225, 0);
+  background-image: linear-gradient(
+      rgba(255, 255, 255, 0.6),
+      rgba(255, 255, 255, 0.6)
+    ),
+    url("../../assets/covers/cover-5.jpg");
+  background-repeat: repeat;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -ms-background-clip: text;
+  background-clip: text;
+  animation: animate 50s ease-in-out infinite;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 900;
+}
+
+/* HIGHLITED HEADING TEXT */
+.text-container-span {
+  display: inline-block;
+  padding: 0 2rem;
+  background-color: var(--main-color-pink);
+  color: #fff;
+}
+
+/* ANIMATIONS */
+
+@keyframes animate {
+  0%,
+  100% {
+    background-position: left top;
+  }
+  25% {
+    background-position: right bottom;
+  }
+  50% {
+    background-position: left bottom;
+  }
+  75% {
+    background-position: right top;
+  }
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0.9;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes move-in {
+  0% {
+    transform: translateX(-50%) translateY(calc(-50% + 5rem));
+    opacity: 0;
+  }
+  80% {
+    transform: translateX(-50%) translateY(calc(-50% - 1rem));
+  }
+
+  100% {
+    transform: translateX(-50%) translateY(-50%);
+    opacity: 1;
+  }
+}
+
+/* MEDIA QUERIES */
+
+@media (max-width: 1250px) {
+  .text-container h1 {
+    font-size: 3rem;
+  }
+  .text-container {
+    width: 90%;
+  }
+}
+@media (max-width: 530px) {
+  .hero-section {
+    height: 25rem;
+  }
+  .text-container h1 {
+    font-size: 2rem;
+  }
+}
+@media (max-width: 500px) {
+  .hero-section {
+    margin-bottom: var(--margin-small-plus);
+  }
+}
+@media (max-width: 433px) {
+  .text-container h1 {
+    font-size: 1.8rem;
+  }
+}
+@media (max-width: 380px) {
+  .text-container {
+    display: none;
+  }
+  .alternative-text {
+    display: block;
+    padding-top: 1rem;
+  }
+}

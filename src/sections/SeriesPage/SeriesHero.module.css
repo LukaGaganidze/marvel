@@ -1,0 +1,110 @@
+.hero-container {
+  width: 100%;
+  height: 60vh;
+  position: relative;
+
+  background-image: linear-gradient(
+      to left,
+      rgba(0, 0, 0, 0.2),
+      rgba(0, 0, 0, 0.2)
+    ),
+    url("../../assets/covers/SeriesCover.jpg");
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.optional-heading {
+  display: none;
+}
+.sec-heading {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  padding-top: 10rem;
+}
+.sec-heading span:first-child {
+  font-size: 5rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  background-color: var(--main-color-pink);
+  color: var(--white-1);
+  display: inline-block;
+  padding: 0 1rem;
+  width: 57rem;
+
+  animation-name: fromLeft;
+  animation-timing-function: ease-in-out;
+  animation-duration: 1s;
+}
+.sec-heading span:last-child {
+  background-color: var(--white-1);
+  color: var(--main-color-pink);
+  font-size: 2rem;
+  letter-spacing: 1.8px;
+  display: inline-block;
+  padding: 0 1rem;
+  width: 57rem;
+
+  animation-name: fromRight;
+  animation-timing-function: ease-in-out;
+  animation-duration: 1s;
+}
+
+@keyframes fromLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(7rem);
+  }
+  80% {
+    transform: translateX(-2rem);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0rem);
+  }
+}
+@keyframes fromRight {
+  0% {
+    opacity: 0;
+    transform: translateX(-7rem);
+  }
+  80% {
+    transform: translateX(2rem);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0rem);
+  }
+}
+
+/* MEDIA QUERIES */
+
+@media (max-width: 635px) {
+  .sec-heading {
+    transform: scale(0.7);
+  }
+}
+@media (max-width: 487px) {
+  .hero-container {
+    height: 40rem;
+  }
+  .sec-heading {
+    display: none;
+  }
+  .optional-heading {
+    display: block;
+    background-color: var(--main-color-pink);
+    color: var(--white-1);
+    width: max-content;
+    position: absolute;
+    padding: 0 1rem;
+    font-size: 4rem;
+    top: 7rem;
+    left: 50%;
+    transform: translate(-50%, 0);
+  }
+}

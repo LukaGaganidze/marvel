@@ -1,0 +1,61 @@
+.role-card:link,
+.role-card:visited {
+  width: 20rem;
+  display: block;
+  text-decoration: none;
+  color: black;
+
+  border-radius: 0.5rem;
+  overflow: hidden;
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.3);
+}
+
+/* IMG BOX */
+.img-box {
+  position: relative;
+  background-image: linear-gradient(to left, black, black);
+  width: 20rem;
+  height: 13.2rem;
+}
+.role {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  transition: all 0.4s;
+  color: #cccccc;
+  text-align: center;
+  letter-spacing: 1px;
+  font-size: 2.4rem;
+}
+.role-img {
+  width: 100%;
+  opacity: 0.4;
+  position: relative;
+  transition: all 0.4s;
+  filter: grayscale(50%);
+}
+
+.role-card:hover .role-img,
+.role-card:active .role-img {
+  opacity: 0.7;
+}
+.role-card:hover .role,
+.role-card:active .role {
+  color: var(--white-1);
+  transform: scale(1.1) translate(-45%, -50%);
+}
+
+/* text box */
+.text-box {
+  padding: 1rem;
+  height: 3rem;
+  display: flex;
+  align-items: center;
+  font-weight: 600;
+  border-color: #333333;
+}
+.name {
+  letter-spacing: 0.5px;
+}

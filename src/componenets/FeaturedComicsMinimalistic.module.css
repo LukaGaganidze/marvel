@@ -1,0 +1,36 @@
+.comic-link {
+  transition: all 0.4s;
+}
+
+.comic-link:link,
+.comic-link:visited {
+  display: block;
+  color: black;
+  text-decoration: none;
+  width: 25rem;
+  border-radius: 0.5rem;
+  overflow: hidden;
+
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.35);
+}
+.comic-link:hover,
+.comic-link:active {
+  color: var(--white-1);
+  background-color: var(--main-color-pink);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+  transform: translateY(-1rem);
+}
+.img-box {
+  width: 25rem;
+  height: 35rem;
+  overflow: hidden;
+}
+.comic-img {
+  width: 100%;
+}
+.text-box {
+  height: 10rem;
+  display: flex;
+  align-items: center;
+  padding: 0 1rem;
+}

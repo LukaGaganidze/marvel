@@ -1,0 +1,9 @@
+.comics-searched-cards-container {
+  width: var(--container-width);
+  margin: var(--container-center);
+  margin-bottom: var(--margin-section);
+
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  row-gap: var(--margin-large);
+}

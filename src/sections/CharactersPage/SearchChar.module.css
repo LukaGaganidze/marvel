@@ -1,0 +1,245 @@
+.search-container {
+  width: 100%;
+  height: 50rem;
+  display: flex;
+  align-items: center;
+  opacity: 0;
+  transform: translateY(5rem);
+  transition: all 0.6s;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url("../../assets/characters/spider-man-1.jpg");
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.search-container.active {
+  width: 100%;
+  opacity: 1;
+  transform: translateY(0rem);
+}
+
+.search-bar {
+  max-width: var(--container-width);
+  margin: var(--container-center);
+}
+.search-bar div {
+  display: flex;
+  align-items: stretch;
+
+  position: relative;
+}
+
+.search-svg {
+  width: 5rem;
+  color: var(--main-color-black);
+  padding: 1rem;
+  position: absolute;
+  z-index: 1;
+  left: 0rem;
+  top: 0rem;
+}
+.search-bar input {
+  height: 6.5rem;
+  width: 90%;
+  padding-left: 7.5rem;
+  font-size: 5rem;
+  font-family: inherit;
+  font-weight: 100;
+  border-radius: 1rem;
+}
+
+.search-bar-heading {
+  color: #fff;
+  letter-spacing: 5px;
+  font-size: 5rem;
+  margin-bottom: 2rem;
+}
+
+.search-bar-heading span {
+  text-transform: uppercase;
+  color: var(--white-1);
+  background-color: var(--main-color-pink);
+  padding: 0 1rem;
+}
+
+.heading-navigation {
+  display: flex;
+  flex-direction: column;
+}
+.aphabet {
+  text-align: center;
+  font-size: 3rem;
+  margin-bottom: 0.8rem;
+}
+
+.letter-box {
+  display: flex;
+  align-items: center;
+}
+.letter {
+  color: var(--white-1);
+  cursor: pointer;
+  transition: all 0.2s;
+  display: inline-block;
+  font-size: 2.2rem;
+}
+.letter-z {
+  transform: translateY(0.45rem);
+}
+
+.letter:hover {
+  transform: translateY(-0.4rem) scale(1.1);
+  color: var(--main-color-pink);
+}
+.letter-z:hover {
+  transform: translateY(0rem);
+}
+.dot-space {
+  color: var(--white-1);
+  margin: 0 8.1px;
+}
+
+/* MEDIA QUEREIS */
+
+@media (max-width: 1222px) {
+  .search-bar-heading {
+    font-size: 3rem;
+  }
+  .aphabet {
+    font-size: 1rem;
+  }
+  .letter {
+    font-size: 1.6rem;
+  }
+  .letter-z {
+    transform: translateY(0rem);
+  }
+  .letter-z:hover {
+    transform: translateY(-0.4rem);
+  }
+}
+
+@media (max-width: 835px) {
+  .search-bar-heading {
+    font-size: 2rem;
+  }
+  .letter {
+    font-size: 1rem;
+  }
+  .dot-space {
+    margin: 0 6px;
+  }
+}
+@media (max-width: 688px) {
+  .search-container {
+    padding: 0;
+  }
+  .search-bar input {
+    height: 4rem;
+    width: 90%;
+    padding-left: 4.5rem;
+    font-size: 3rem;
+  }
+  .search-svg {
+    transform: translateX(2rem);
+    width: 3rem;
+  }
+}
+
+@media (max-width: 637px) {
+  .search-bar input {
+    width: 81%;
+  }
+  .dot-space {
+    margin: 0 4px;
+  }
+  .search-bar-heading {
+    padding: 0 2rem;
+  }
+  .aphabet {
+    padding-left: 2rem;
+  }
+  .search-bar input {
+    margin-left: 2rem;
+  }
+}
+
+@media (max-width: 550px) {
+  .search-container {
+    height: 35rem;
+  }
+  .aphabet {
+    font-size: 0.5rem;
+    padding: 0 1rem;
+  }
+  .letter-box {
+    text-align: center;
+    width: 100%;
+  }
+  .letter {
+    font-size: 0.8rem;
+  }
+  .dot-space {
+    display: none;
+  }
+
+  .search-svg {
+    transform: translateX(2rem) translateY(-0.7rem);
+    width: 2rem;
+  }
+
+  .input-container input {
+    height: 2rem;
+    margin: 0 auto;
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .search-bar-heading {
+    font-size: 1.6rem;
+    letter-spacing: 1px;
+  }
+  .search-svg {
+    transform: translateX(1rem) translateY(-0.7rem);
+    width: 2rem;
+  }
+}
+@media (max-width: 330px) {
+  .search-container {
+    transform: translateY(0rem);
+  }
+
+  .search-container.active {
+    width: 100%;
+    opacity: 1;
+    transform: translateY(-3rem);
+  }
+  .search-bar-heading {
+    font-size: 1.6rem;
+    letter-spacing: 1px;
+  }
+  .search-svg {
+    transform: translateX(0rem) translateY(-0.7rem);
+    width: 2rem;
+  }
+}
+@media (max-width: 300px) {
+  .search-container {
+    transform: translateY(0rem);
+  }
+
+  .search-container.active {
+    width: 100%;
+    opacity: 1;
+    transform: translateY(-8rem);
+  }
+  .search-bar-heading {
+    font-size: 1.6rem;
+    letter-spacing: 1px;
+  }
+  .search-svg {
+    transform: translateX(0rem) translateY(-0.7rem);
+    width: 2rem;
+  }
+}

@@ -1,0 +1,4 @@
+.series-creator-container {
+  margin: var(--container-center);
+  width: var(--container-width);
+}

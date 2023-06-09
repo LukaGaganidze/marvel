@@ -1,0 +1,124 @@
+.swiper-container {
+  height: 70vh;
+  overflow: hidden;
+}
+
+.deatured-comics-a:link,
+.deatured-comics-a:visited {
+  display: block;
+  text-decoration: none;
+  height: 100%;
+  width: 100%;
+  background-color: black;
+  color: var(--white-1);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  overflow: hidden;
+}
+.deatured-comics-a:hover .background-img,
+.deatured-comics-a:active .background-img {
+  opacity: 0.25;
+}
+.deatured-comics-a:hover .content,
+.deatured-comics-a:active .content {
+  opacity: 1;
+  visibility: visible;
+}
+.content {
+  position: relative;
+  z-index: 1;
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.3s;
+}
+
+/* background img */
+.background-img {
+  position: absolute !important;
+  height: 71vh !important;
+  top: 0;
+  left: 0;
+  transition: all 0.3s;
+}
+
+/* content */
+
+.comic-heading {
+  font-size: 3.4rem;
+  letter-spacing: 1px;
+  margin-bottom: 1.8rem;
+  padding: 0 1rem;
+}
+
+.releasedate,
+.writer-name,
+.penciler {
+  align-self: flex-start;
+  padding-left: 3rem;
+  padding-right: 3rem;
+  padding-bottom: 0.5rem;
+  margin-bottom: 1rem;
+  border-bottom: solid rgba(255, 255, 255, 0.4) 1px;
+}
+.inner-cntent-desc {
+  font-size: 1.6rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: rgba(255, 255, 255, 0.8);
+}
+.inner-cntent {
+  letter-spacing: 2px;
+  color: var(--white-1);
+}
+
+/* OPTIONAL FOR DIFFERENT SCREEN RESOLUTIONS */
+
+.swiper-2 {
+  display: none;
+}
+.swiper-3 {
+  display: none;
+}
+/* MEDIA QUERIES */
+
+@media (max-width: 920px) {
+  .content {
+    display: none;
+  }
+}
+
+@media (max-width: 500px) {
+  .swiper {
+    display: none;
+  }
+  .swiper-2 {
+    display: block;
+  }
+  .content {
+    display: block;
+  }
+  .comic-heading {
+    font-size: 2rem;
+  }
+
+  .inner-cntent-desc {
+    font-size: 1rem;
+  }
+  .inner-cntent {
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width: 370px) {
+  .swiper {
+    display: none;
+  }
+  .swiper-2 {
+    display: none;
+  }
+  .swiper-3 {
+    display: block;
+  }
+}

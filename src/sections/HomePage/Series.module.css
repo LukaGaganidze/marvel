@@ -1,0 +1,241 @@
+.series-sec {
+  margin-top: 25rem;
+  opacity: 0;
+  transform: translateY(10rem);
+  position: relative;
+}
+
+/* SECTION MAIN HEADER */
+.main-header {
+  position: absolute;
+  font-size: 5rem;
+  color: var(--main-color-black);
+  letter-spacing: 2px;
+}
+.mobile-v-heading {
+  display: none;
+}
+
+.main-header span {
+  text-transform: uppercase;
+  display: inline-block;
+  background-color: var(--main-color-pink);
+  color: var(--white-1);
+  padding: 0 1rem;
+}
+.main-header-left {
+  top: -17rem;
+  left: 20rem;
+}
+.main-header-right {
+  top: -9rem;
+  right: 20rem;
+}
+
+/*  SECTION FADE IN */
+.series-sec.visible {
+  transition: all 1s;
+  transform: translateY(0);
+  opacity: 1;
+}
+
+/* SLIDER */
+
+.series-slider {
+  height: 55rem;
+  position: relative;
+  overflow: hidden;
+}
+/* optional */
+.slider-l {
+  display: block;
+}
+.slider-s {
+  display: none;
+}
+
+.absolute-text {
+  position: absolute;
+  top: 0;
+  left: 15%;
+  height: 100%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.series-text-container {
+  color: #fff;
+  text-align: left;
+  width: 50%;
+}
+
+.series-header-tertiary {
+  margin-bottom: 3rem;
+  font-size: 2rem;
+  letter-spacing: 1px;
+}
+.series-header-primery {
+  font-size: 6rem;
+  letter-spacing: 3px;
+}
+.series-description {
+  letter-spacing: 2px;
+  font-size: 2rem;
+  line-height: 2.8rem;
+  margin-bottom: 5rem;
+}
+.series-btn:link,
+.series-btn:visited {
+  padding: 1rem 3rem;
+  font-size: 2rem;
+  background-color: #e6242b55;
+  color: #fff;
+  border: solid #fff 2px;
+  border-radius: 1rem;
+  cursor: pointer;
+  transition: all 0.4s;
+  font-weight: 800;
+  text-decoration: none;
+}
+.series-btn:hover {
+  border: solid var(--color-pink-dark) 2px;
+  background-color: var(--color-pink-dark);
+  transform: translateY(-0.5rem);
+}
+.series-btn:active {
+  transform: translateY(-0.1rem);
+}
+
+/* img */
+.series-img-container {
+  width: 100vw;
+  height: 100%;
+  top: 0;
+  left: 0;
+
+  position: absolute;
+  z-index: 0;
+  background-image: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0.5),
+    rgba(0, 0, 0, 0.5)
+  );
+}
+.series-img {
+  width: 100vw !important;
+}
+
+/* MEDIA QUERIES */
+
+@media (max-width: 1283px) {
+  .series-sec {
+    margin-top: 15rem;
+  }
+  .main-header {
+    font-size: 3rem;
+  }
+  .main-header-left {
+    top: -10rem;
+    left: 5rem;
+  }
+  .main-header-right {
+    top: -5rem;
+    right: 5rem;
+  }
+}
+
+@media (max-width: 725px) {
+  .series-header-tertiary {
+    font-size: 1.6rem;
+    width: 100%;
+    text-align: center;
+  }
+  .series-header-primery {
+    font-size: 3rem;
+    width: 100%;
+    text-align: center;
+  }
+  .series-description {
+    font-size: 1.4rem;
+    width: 100%;
+    text-align: center;
+  }
+  .series-btn {
+    width: fit-content;
+    margin: 0 auto;
+    transform: scale(0.7);
+  }
+  .series-btn:hover {
+    transform: scale(0.75);
+  }
+  .series-text-container {
+    width: 100%;
+    transform: translateX(-11rem);
+  }
+}
+@media (max-width: 600px) {
+  .series-sec {
+    margin-top: 10rem;
+  }
+  .main-header {
+    font-size: 2rem;
+    text-align: center;
+    width: 100%;
+  }
+  .main-header-left {
+    top: -7rem;
+    left: 0rem;
+  }
+  .main-header-right {
+    top: -4rem;
+    right: 0rem;
+  }
+}
+
+@media (max-width: 500px) {
+  .series-sec {
+    margin-top: 10rem;
+  }
+  .slider-l {
+    display: none;
+  }
+  .slider-s {
+    display: block;
+  }
+  .slider-container {
+    height: 40rem;
+  }
+}
+@media (max-width: 400px) {
+  .series-sec {
+    margin-top: 4rem;
+  }
+  .main-header {
+    display: none;
+  }
+  .mobile-v-heading {
+    display: block;
+    text-align: center;
+    font-size: 3rem;
+    background: var(--main-color-pink);
+    color: var(--white-1);
+  }
+}
+@media (max-width: 350px) {
+  .series-sec {
+    margin-top: 4rem;
+  }
+  .absolute-text {
+    left: 11rem;
+  }
+}
+@media (max-width: 280px) {
+  .mobile-v-heading {
+    font-size: 2.6rem;
+  }
+  .absolute-text {
+    left: 11rem;
+  }
+}

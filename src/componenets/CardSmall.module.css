@@ -1,0 +1,50 @@
+/* .creators-z-text-box {
+  width: 50rem;
+  background-image: linear-gradient(
+      to bottom,
+      rgba(230, 230, 230, 0.9),
+      rgba(230, 230, 230, 0.9)
+    ),
+    url("../../assets/covers/cover-6.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+
+
+} */
+
+.card-sml {
+  width: 20rem;
+  clip-path: polygon(0 7%, 100% 0, 100% 93%, 0 100%);
+  padding-bottom: 3rem;
+}
+.card-smimg-box {
+  width: 20rem;
+  height: 25rem;
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
+}
+.card-smimg {
+  width: 100%;
+  clip-path: polygon(0 7%, 100% 0, 100% 93%, 0 100%);
+}
+
+.card-sml-text-box {
+  border: solid var(--main-color-pink) 2px;
+  padding: 4rem 1rem 2.4rem 1rem;
+  transform: translateY(-27px);
+  position: relative;
+  z-index: 0;
+
+  background-color: var(--main-color-pink);
+}
+.card-owner-desc {
+  color: var(--white-1);
+}
+.card-owner-name {
+  font-size: 2rem;
+  color: var(--white-1);
+  letter-spacing: 1px;
+  font-weight: 600;
+}

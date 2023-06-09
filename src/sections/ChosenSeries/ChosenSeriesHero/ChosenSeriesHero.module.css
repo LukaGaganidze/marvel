@@ -1,0 +1,59 @@
+/*HERO */
+
+.hero-char {
+  background: linear-gradient(var(--main-color-pink), var(--main-color-black));
+  border-top: solid #fff 1px;
+  clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+}
+.char-hero-flex {
+  display: flex;
+  gap: 5rem;
+}
+.srch-char-img-box {
+  height: 40rem;
+}
+.srch-char-img {
+  height: 100%;
+}
+
+.char-pg-container {
+  margin: var(--container-center);
+  width: var(--container-width);
+}
+
+.srch-char-text-box {
+  margin-top: 5rem;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.srch-comic-name {
+  font-size: 4rem;
+  letter-spacing: 2px;
+}
+.srch-comic-year {
+  font-size: 4rem;
+  text-align: center;
+}
+
+/*HERO WITHOU IMAGE */
+
+.optional-hero-container {
+  height: 30rem;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url("../../../assets/characters-assamble/assamble-2.jpg");
+  background-size: cover;
+  background-position: bottom;
+  background-repeat: no-repeat;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-bottom: 4rem;
+}
+.optional-info {
+  color: var(--white-1);
+  font-size: 5rem;
+}

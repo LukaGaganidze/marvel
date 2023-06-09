@@ -1,0 +1,51 @@
+.comic-min-card {
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+  transition: all 0.4s;
+  width: fit-content;
+  width: 21rem;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  overflow: hidden;
+}
+
+.comic-min-card:link,
+.comic-min-card:visited {
+  display: block;
+  color: black;
+  text-decoration: none;
+}
+.comic-min-card:hover,
+.comic-min-card:active {
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.3);
+  transform: translateY(-0.8rem);
+}
+
+.comic-min-card:hover .txt-box,
+.comic-min-card:active .txt-box {
+  background-color: var(--main-color-pink);
+  color: var(--white-1);
+}
+
+/* img */
+.img-box {
+  width: 21rem;
+  transform: translateY(1rem);
+}
+.img-box img {
+  width: 100%;
+  height: 100%;
+}
+
+/* text */
+.txt-box {
+  height: 8rem;
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+  transition: all 0.4s;
+  overflow-y: scroll;
+}
+
+.txt-box::-webkit-scrollbar {
+  display: none;
+}

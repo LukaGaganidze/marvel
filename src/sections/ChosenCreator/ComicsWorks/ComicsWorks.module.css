@@ -1,0 +1,32 @@
+.creators-comics {
+  margin: var(--container-center);
+  width: var(--container-width);
+}
+
+.creators-comics-heading {
+  margin-bottom: var(--margin-small-plus);
+}
+
+.creators-comics-heading h3 {
+  font-size: 4rem;
+  letter-spacing: 2px;
+  font-weight: 100;
+  color: var(--main-color-pink);
+}
+
+.heading-info-box {
+  display: block;
+  border-bottom: solid rgba(230, 36, 43, 0.3) 1px;
+  width: fit-content;
+  padding: 0.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.heading-info-box span:first-child {
+  color: #333;
+  letter-spacing: 1px;
+}
+.heading-info-box span:last-child {
+  letter-spacing: 1px;
+  font-size: 2rem;
+}

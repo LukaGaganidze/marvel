@@ -1,0 +1,59 @@
+/* CONTAINER */
+
+.creators-search-results-card:link,
+.creators-search-results-card:visited {
+  display: block;
+  text-decoration: none;
+  color: black;
+
+  width: 19rem;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  border-radius: 0.5rem;
+  overflow: hidden;
+  cursor: pointer;
+  padding: 3rem 1.4rem;
+
+  transition: all 0.4s;
+  backface-visibility: hidden;
+}
+
+.creators-search-results-card:hover {
+  transform: translateY(-0.6rem) scale(1.015);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* TEXT BOX */
+
+.cr-text-box {
+}
+
+.cr-inner-headings {
+  font-family: "Nothing You Could Do", cursive;
+  color: var(--main-color-pink);
+}
+
+.name-box {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+.name-box p:last-child {
+  height: 2rem;
+}
+
+.sub-heading {
+  color: rgba(0, 0, 0, 0.5);
+  margin-bottom: 0.6rem;
+}
+
+.work-avalable div {
+  border-bottom: solid rgba(0, 0, 0, 0.2) 1px;
+  margin-bottom: 0.8rem;
+  font-size: 1.6rem;
+}
+
+.work-avalable div span:first-child {
+  display: inline-block;
+  letter-spacing: 1px;
+  width: 6rem;
+}

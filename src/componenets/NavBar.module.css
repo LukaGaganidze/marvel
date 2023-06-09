@@ -1,0 +1,273 @@
+.navbar--background {
+  width: 100%;
+  background-color: var(--main-color-black);
+}
+
+.navigation {
+  background-color: var(--main-color-black);
+  max-width: var(--container-width);
+  margin: var(--container-center);
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 6rem;
+  padding: 0 2rem;
+}
+
+.logo-box {
+  background-image: url("../assets/covers/logov3.jpg");
+  background-size: cover;
+  height: 6rem;
+  width: 32rem;
+}
+.navigation-link-box {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  height: 100%;
+}
+.navigation-link-item {
+  position: relative;
+  overflow: hidden;
+  height: 100%;
+  display: flex;
+}
+.navigation-link-item a:link,
+.navigation-link-item a:visited {
+  display: flex;
+  align-items: center;
+  padding: 0 3rem;
+  text-decoration: none;
+  transition: all 0.4s;
+  height: 100%;
+  backface-visibility: hidden;
+  text-decoration: none;
+}
+
+.navbar-link-backgr {
+  background-color: var(--main-color-pink);
+  top: -100%;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  transition: all 0.4s;
+}
+
+.navbar-link-text {
+  font-size: 2.2rem;
+  position: relative;
+  z-index: 2;
+}
+
+.navigation-link-item a:hover .navbar-link-backgr,
+.navigation-link-item a:active .navbar-link-backgr {
+  top: 0;
+}
+
+.navigation-link-item a:hover,
+.navigation-link-item a:active {
+  transform: scale(1.2);
+}
+
+.navigation-link-item .active-link {
+  background-color: var(--main-color-pink);
+}
+.navigation-link-item .active-link .navbar-link-backgr {
+  top: 0;
+}
+
+/*  */
+/*  */
+/* RESPONSIVE NAVBAR */
+/*  */
+/*  */
+.smaller-nav-container {
+  display: none;
+}
+.responsive-navbar {
+  background-color: var(--main-color-black);
+  height: 100%;
+  width: 60%;
+  position: fixed;
+  z-index: 100;
+  left: 0;
+  top: 0;
+  display: flex;
+  align-items: center;
+
+  transform: translateX(-200%);
+
+  transition: all 0.4s;
+}
+.active-navigation.responsive-navbar {
+  transform: translateX(0%);
+}
+
+.resp-navigation-link-box {
+  width: 100%;
+}
+.resp-navigation-link-item {
+  list-style: none;
+  display: block;
+  background-color: #fff;
+}
+.resp-navigation-link-item:not(:last-child) {
+  margin-bottom: 0.5rem;
+}
+.resp-navigation-link-item a:link,
+.resp-navigation-link-item a:visited {
+  text-decoration: none;
+  font-size: 5rem;
+  display: inline-block;
+  padding: 1.4rem 0;
+  padding-left: 10rem;
+  width: 100%;
+  color: black;
+  letter-spacing: 3px;
+}
+
+/* BURGER MENU */
+/* general */
+.burger-men-container {
+  position: fixed;
+  top: 2rem;
+  left: 2rem;
+  z-index: 101;
+  background-color: var(--main-color-pink);
+  padding: 2rem;
+  border-radius: 50%;
+  overflow: hidden;
+  scale: 0.7;
+  cursor: pointer;
+}
+.burger-men {
+  width: 6rem;
+  height: 6rem;
+  cursor: pointer;
+  position: relative;
+}
+
+.bread-1 span,
+.bread-2 span,
+.beef span {
+  height: 1rem;
+  width: 100%;
+  background-color: var(--white-1);
+  border-radius: 1rem;
+  transition: all 0.5s;
+}
+
+/* non active state */
+.bread-1 {
+  height: 2rem;
+  display: flex;
+  align-items: center;
+
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: all 0.5s;
+}
+
+.bread-2 {
+  display: flex;
+  align-items: center;
+  height: 2rem;
+
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  transition: all 0.5s;
+}
+
+.beef {
+  display: flex;
+  align-items: center;
+  height: 2rem;
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: all 0.5s;
+}
+/* active state */
+.burger-men.active-nav .bread-1 {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.burger-men.active-nav .bread-1 span {
+  transform: rotate(45deg);
+}
+.burger-men.active-nav .bread-2 {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.burger-men.active-nav .bread-2 span {
+  transform: rotate(-45deg);
+}
+.burger-men.active-nav .beef {
+  display: none;
+}
+
+/* MEDIA QUERIES */
+
+@media (max-width: 1150px) {
+  .navbar--background {
+    display: none;
+  }
+  .smaller-nav-container {
+    display: block;
+  }
+}
+
+@media (max-width: 1000px) {
+  /* BURGER */
+  .burger-men-container {
+    scale: 0.7;
+    top: 0rem;
+    left: 0rem;
+  }
+}
+@media (max-width: 700px) {
+  .responsive-navbar {
+    width: 100%;
+    text-align: center;
+  }
+  /* BURGER */
+  .burger-men-container {
+    scale: 0.6;
+    top: 0rem;
+    left: 0rem;
+  }
+  .resp-navigation-link-item a:link,
+  .resp-navigation-link-item a:visited {
+    font-size: 3.4rem;
+    padding: 1.2rem 0;
+    padding-left: 0rem;
+    letter-spacing: 2px;
+  }
+}
+@media (max-width: 600px) {
+  /* BURGER */
+  .burger-men-container {
+    scale: 0.5;
+    top: -1rem;
+    left: -1rem;
+  }
+}
+@media (max-width: 500px) {
+  /* BURGER */
+  .burger-men-container {
+    scale: 0.4;
+    top: -1.5rem;
+    left: -1.5rem;
+  }
+}

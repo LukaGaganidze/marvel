@@ -1,0 +1,4 @@
+.container {
+  margin: var(--container-center);
+  width: var(--container-width);
+}

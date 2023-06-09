@@ -1,0 +1,70 @@
+.character-card-L {
+  max-width: 25rem;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.266);
+
+  transition: all 0.4s;
+}
+
+.char--img-bx {
+  overflow: hidden;
+  width: 100%;
+  clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+}
+.char--img-bx img {
+  height: 15rem;
+}
+.char-card--img {
+  width: 100%;
+  height: 100%;
+  scale: 1.2;
+}
+
+/* text box */
+
+.card-char--text-box {
+  padding: 2rem 1.2rem;
+}
+
+.card-char-name {
+  height: 7rem;
+}
+
+.card-char--text-box p {
+  height: 8rem;
+}
+.card-char--text-box p:nth-child(3) {
+  height: 8rem;
+}
+.card-char--text-box span {
+  color: var(--white-2);
+  color: #999999;
+}
+
+.character-card-L:hover {
+  box-shadow: 0 15px 15px rgba(0, 0, 0, 0.134);
+  transform: translateY(-1rem) scale(1.02);
+}
+.char-card--btn:link,
+.char-card--btn:visited {
+  text-decoration: none;
+  display: inline-block;
+  text-align: center;
+}
+.char-card--btn {
+  width: 100%;
+  border: none;
+  background-color: inherit;
+  font-family: inherit;
+  font-size: 1.8rem;
+  border: solid 1px var(--main-color-pink);
+  color: var(--main-color-pink);
+  cursor: pointer;
+  transition: all 0.3s;
+  padding: 0.6rem;
+}
+.char-card--btn:hover {
+  border: solid 1px var(--main-color-pink);
+  background-color: var(--main-color-pink);
+  color: var(--white-1);
+  cursor: pointer;
+}

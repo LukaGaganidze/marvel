@@ -1,0 +1,73 @@
+html {
+  font-size: 62.5%;
+}
+
+*:link,
+*:visited,
+*::before,
+*::after {
+  box-sizing: border-box;
+  font-family: inherit;
+  color: #fff;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "PT Sans", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: var(--font-size-default);
+}
+
+:root {
+  /* SIZE */
+  --container-width: 125rem;
+  --container-center: 0 auto;
+
+  --margin-inner-text-small: 0.4rem;
+  --margin-inner-text-mid: 0.5rem;
+  --margin-inner-text-large: 0.8rem;
+
+  --font-size-small: 1.6rem;
+  --font-size-default: 1.8rem;
+  --font-size-medium: 2.4rem;
+  --font-size-large: 3rem;
+
+  --margin-small: 2rem;
+  --margin-small-plus: 3rem;
+  --margin-mid: 4rem;
+  --margin-large: 6rem;
+
+  --margin-section: 12rem;
+
+  /* COLORS */
+  /* main */
+  --main-color-black: #202020;
+  --main-color-pink: #e62429;
+
+  --main-color-black-rgba-dark: rgba(32, 32, 32, 0.899);
+  --main-color-black-rgba-light: rgba(32, 32, 32, 0.582);
+  --main-color-pink-rgba: rgba(230, 36, 43, 0.8);
+
+  --color-black-light: #151515;
+  --color-black-black: #000000;
+
+  --color-pink-light: #eb5054;
+  --color-pink-dark: #b81d21;
+
+  --white-1: #fff;
+  --white-2: ##bbbbb6;
+  --white-3: ##767676;
+}

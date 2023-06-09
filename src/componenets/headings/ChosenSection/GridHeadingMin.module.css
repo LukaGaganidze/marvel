@@ -1,0 +1,32 @@
+.main-heading {
+  font-size: 4rem;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+}
+.main-heading-optional {
+  font-size: 3rem;
+  letter-spacing: 2px;
+}
+.main-heading span:first-child {
+  color: var(--main-color-pink);
+  letter-spacing: 2px;
+  font-size: 6rem;
+}
+
+.secondary-heading {
+  display: flex;
+  align-items: center;
+  font-size: 2.5rem;
+  gap: 1rem;
+}
+.secondary-heading:last-child {
+  margin-bottom: var(--margin-small);
+}
+
+.secondary-heading :first-child {
+  color: rgba(0, 0, 0, 0.7);
+  font-weight: 600;
+  letter-spacing: 1px;
+  font-size: 2rem;
+}

@@ -1,0 +1,71 @@
+.creator-card {
+  width: min-content;
+  clip-path: polygon(0 0, 100% 0, 100% 95%, 90% 100%, 0 100%);
+  cursor: pointer;
+  background-color: var(--main-color-black-rgba-light);
+
+  transition: all 0.4s;
+  margin-bottom: 8rem;
+  max-width: 15rem;
+}
+
+.creator-img {
+  max-width: 15rem;
+  transform: translateY(0.5rem);
+  transition: all 0.4s 0.2s;
+}
+.creator-textbox {
+  border-top: solid var(--color-pink-dark) 0.5rem;
+  padding: 1rem;
+  position: relative;
+  overflow: hidden;
+  background-color: var(--main-color-black-rgba-light);
+  color: var(--white-1);
+  backface-visibility: hidden;
+}
+
+.card-heading-cr {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+.card-heading-int {
+  font-size: 1.6rem;
+  margin-bottom: 0.6rem;
+  color: rgba(255, 255, 255, 0.703);
+}
+.hoverbg-text {
+  font-size: 2.1rem;
+}
+
+.ccard-ul {
+  font-size: 1.4rem;
+  list-style: none;
+}
+
+/* HOVER */
+
+.creator-card:hover {
+  background-color: var(--color-pink-dark);
+  transform: scale(1.2) translateY(-2rem);
+}
+
+.creator-card:hover .creator-textbox {
+  background-color: var(--color-pink-dark);
+  transition: background-color 0s 0.3s;
+}
+
+.hover-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--color-pink-dark);
+  transform: translateY(-100%);
+  transition: all 0.4s;
+  padding: 2rem 1rem;
+}
+
+.creator-card:hover .hover-background {
+  transform: translateY(0);
+}

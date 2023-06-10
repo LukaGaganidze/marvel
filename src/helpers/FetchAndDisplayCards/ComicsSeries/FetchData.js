@@ -11,7 +11,7 @@ const FetchData = ({ marvelApi, navTo }) => {
   const updatingBaseUrl1 = updatingBaseUrl.slice(25, -1);
   console.log(updatingBaseUrl1);
   const updatedBaseUrl =
-    "hthttps://marvelpedia-v1.netlify.app" + updatingBaseUrl1;
+    "https://marvelpedia-v1.netlify.app" + updatingBaseUrl1;
   // console.log(baseURL);
 
   useEffect(() => {

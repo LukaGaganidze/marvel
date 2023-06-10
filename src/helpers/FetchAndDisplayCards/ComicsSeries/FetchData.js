@@ -6,26 +6,19 @@ import FeaturedComicsMinimalistic from "../../../componenets/FeaturedComicsMinim
 const FetchData = ({ marvelApi, navTo }) => {
   const [data, setData] = useState(null);
 
-  const baseURL = marvelApi;
-  const updatingBaseUrl = baseURL.toString();
-  const updatingBaseUrl1 = updatingBaseUrl.slice(25, -1);
-  console.log(updatingBaseUrl1);
-  const updatedBaseUrl =
-    "https://marvelpedia-v1.netlify.app" + updatingBaseUrl1;
-  // console.log(baseURL);
-
   useEffect(() => {
     async function fetchData() {
       const getHash = (timeStamp, privatKey, publicKey) => {
         return MD5(timeStamp + privatKey + publicKey).toString();
       };
 
+      const baseURL = marvelApi;
       const timeStamp = Date.now().toString();
       const publicKey = process.env.REACT_APP_MARVEL_PUBLIC_API_KEY;
       const privatKey = process.env.REACT_APP_MARVEL_PRIVET_API_KEY;
       const hash = getHash(timeStamp, privatKey, publicKey);
 
-      const url = `${updatedBaseUrl}?ts=${timeStamp}&apikey=${publicKey}&hash=${hash}`;
+      const url = `${baseURL}?ts=${timeStamp}&apikey=${publicKey}&hash=${hash}`;
 
       try {
         const response = await fetch(url);

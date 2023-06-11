@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.cc897bab.css",
-    "main.js": "/static/js/main.8e401367.js",
+    "main.css": "/static/css/main.6348919d.css",
+    "main.js": "/static/js/main.2959a75f.js",
     "static/media/marvel-intro.mp4": "/static/media/marvel-intro.105c7408c0eda5e5cb44.mp4",
     "static/media/assamble-2.jpg": "/static/media/assamble-2.aefb3fd3b39074e7759a.jpg",
     "static/media/background.jpg": "/static/media/background.5b73418c72b6dc36af82.jpg",
@@ -62,19 +62,19 @@
     "static/media/Moon-Knight.jpg": "/static/media/Moon-Knight.175bb1804e191c2fe56b.jpg",
     "static/media/leterrer.jpg": "/static/media/leterrer.da4dfda8e379c04025e0.jpg",
     "static/media/moon-knight.jpg": "/static/media/moon-knight.a7123ceb20f5811f5a63.jpg",
-    "static/media/redux.png": "/static/media/redux.39975f31227d11dee5fe.png",
     "static/media/editor.jpg": "/static/media/editor.d56e41aefa7515b60d99.jpg",
     "static/media/loki.jpg": "/static/media/loki.d7f4de810038417a044e.jpg",
     "static/media/Thing.jpg": "/static/media/Thing.adf0ab1752e5f44565ad.jpg",
     "static/media/css.png": "/static/media/css.a512cb2ba3e75624fd75.png",
     "static/media/html.png": "/static/media/html.7c80a1f728acfcff943a.png",
     "static/media/writer.jpg": "/static/media/writer.bcfdf04bc97d5e408e1d.jpg",
+    "static/media/swiper-react.png": "/static/media/swiper-react.f05d768f2fba14bce360.png",
     "index.html": "/index.html",
-    "main.cc897bab.css.map": "/static/css/main.cc897bab.css.map",
-    "main.8e401367.js.map": "/static/js/main.8e401367.js.map"
+    "main.6348919d.css.map": "/static/css/main.6348919d.css.map",
+    "main.2959a75f.js.map": "/static/js/main.2959a75f.js.map"
   },
   "entrypoints": [
-    "static/css/main.cc897bab.css",
-    "static/js/main.8e401367.js"
+    "static/css/main.6348919d.css",
+    "static/js/main.2959a75f.js"
   ]
 }

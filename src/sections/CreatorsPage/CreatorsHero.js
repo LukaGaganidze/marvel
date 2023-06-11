@@ -50,16 +50,16 @@ const SPIDER_DAT = [
 ];
 const HULK_DAT = [
   {
-    image: stanLeeSpiderHulk,
-    fullName: "Stan Lee",
-    desc: "writer ",
-    link: "/creators/30",
-  },
-  {
     image: JackKirbyHulk,
     fullName: "Jack Kirby",
     desc: "artist",
     link: "/creators/196",
+  },
+  {
+    image: stanLeeSpiderHulk,
+    fullName: "Stan Lee",
+    desc: "writer ",
+    link: "/creators/30",
   },
 ];
 

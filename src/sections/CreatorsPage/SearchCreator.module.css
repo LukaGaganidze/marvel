@@ -171,3 +171,19 @@
     padding: 5rem 5rem;
   }
 }
+@media (max-width: 592px) {
+  .search-bar div {
+    display: flex;
+    align-items: stretch;
+    transform: translateX(-3.5rem);
+    position: relative;
+  }
+  .letter-box {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+  .dot-space {
+    display: none;
+  }
+}

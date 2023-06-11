@@ -1,4 +1,5 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
+import { createPortal } from "react-dom";
 import { NavLink } from "react-router-dom";
 
 import classes from "./NavBar.module.css";
@@ -7,6 +8,9 @@ const NavBar = () => {
   const [navIsActive, setNavIsActive] = useState(false);
   const menuStateToggleHandler = () => {
     setNavIsActive((prev) => !prev);
+  };
+  const closeNavbarHandler = () => {
+    setNavIsActive(false);
   };
 
   return (
@@ -104,73 +108,92 @@ const NavBar = () => {
         </div>
 
         {/* NAVIGATION */}
-        <nav
-          className={`${classes["responsive-navbar"]} ${
-            classes[navIsActive ? "active-navigation" : ""]
-          }`}
-        >
-          <ul className={classes["resp-navigation-link-box"]}>
-            <li className={classes["resp-navigation-link-item"]}>
-              <NavLink
-                className={({ isActive, isPending }) =>
-                  classes[isActive ? "active-link" : ""]
-                }
-                to="/"
-              >
-                <div className={classes["resp-navbar-link-backgr"]}></div>
-                <p className={classes["resp-navbar-link-text"]}>Home</p>
-              </NavLink>
-            </li>
 
-            <li className={classes["resp-navigation-link-item"]}>
-              <NavLink
-                className={({ isActive, isPending }) =>
-                  classes[isActive ? "active-link" : ""]
-                }
-                to="/characters"
+        {createPortal(
+          <nav
+            className={`${classes["responsive-navbar"]} ${
+              classes[navIsActive ? "active-navigation" : ""]
+            }`}
+          >
+            <ul className={classes["resp-navigation-link-box"]}>
+              <li
+                onClick={closeNavbarHandler}
+                className={classes["resp-navigation-link-item"]}
               >
-                <div className={classes["resp-navbar-link-backgr"]}></div>
-                <p className={classes["resp-navbar-link-text"]}>Characters</p>
-              </NavLink>
-            </li>
+                <NavLink
+                  className={({ isActive, isPending }) =>
+                    classes[isActive ? "active-link" : ""]
+                  }
+                  to="/"
+                >
+                  <div className={classes["resp-navbar-link-backgr"]}></div>
+                  <p className={classes["resp-navbar-link-text"]}>Home</p>
+                </NavLink>
+              </li>
 
-            <li className={classes["resp-navigation-link-item"]}>
-              <NavLink
-                to="/comics"
-                className={({ isActive, isPending }) =>
-                  classes[isActive ? "active-link" : ""]
-                }
+              <li
+                onClick={closeNavbarHandler}
+                className={classes["resp-navigation-link-item"]}
               >
-                <div className={classes["resp-navbar-link-backgr"]}></div>
-                <p className={classes["resp-navbar-link-text"]}>Comics</p>
-              </NavLink>
-            </li>
+                <NavLink
+                  className={({ isActive, isPending }) =>
+                    classes[isActive ? "active-link" : ""]
+                  }
+                  to="/characters"
+                >
+                  <div className={classes["resp-navbar-link-backgr"]}></div>
+                  <p className={classes["resp-navbar-link-text"]}>Characters</p>
+                </NavLink>
+              </li>
 
-            <li className={classes["resp-navigation-link-item"]}>
-              <NavLink
-                to="/series"
-                className={({ isActive, isPending }) =>
-                  classes[isActive ? "active-link" : ""]
-                }
+              <li
+                onClick={closeNavbarHandler}
+                className={classes["resp-navigation-link-item"]}
               >
-                <div className={classes["resp-navbar-link-backgr"]}></div>
-                <p className={classes["resp-navbar-link-text"]}>Series</p>
-              </NavLink>
-            </li>
+                <NavLink
+                  to="/comics"
+                  className={({ isActive, isPending }) =>
+                    classes[isActive ? "active-link" : ""]
+                  }
+                >
+                  <div className={classes["resp-navbar-link-backgr"]}></div>
+                  <p className={classes["resp-navbar-link-text"]}>Comics</p>
+                </NavLink>
+              </li>
 
-            <li className={classes["resp-navigation-link-item"]}>
-              <NavLink
-                className={({ isActive, isPending }) =>
-                  classes[isActive ? "active-link" : ""]
-                }
-                to="/creators"
+              <li
+                onClick={closeNavbarHandler}
+                className={classes["resp-navigation-link-item"]}
               >
-                <div className={classes["resp-navbar-link-backgr"]}></div>
-                <p className={classes["resp-navbar-link-text"]}>Creators</p>
-              </NavLink>
-            </li>
-          </ul>
-        </nav>
+                <NavLink
+                  to="/series"
+                  className={({ isActive, isPending }) =>
+                    classes[isActive ? "active-link" : ""]
+                  }
+                >
+                  <div className={classes["resp-navbar-link-backgr"]}></div>
+                  <p className={classes["resp-navbar-link-text"]}>Series</p>
+                </NavLink>
+              </li>
+
+              <li
+                onClick={closeNavbarHandler}
+                className={classes["resp-navigation-link-item"]}
+              >
+                <NavLink
+                  className={({ isActive, isPending }) =>
+                    classes[isActive ? "active-link" : ""]
+                  }
+                  to="/creators"
+                >
+                  <div className={classes["resp-navbar-link-backgr"]}></div>
+                  <p className={classes["resp-navbar-link-text"]}>Creators</p>
+                </NavLink>
+              </li>
+            </ul>
+          </nav>,
+          document.getElementById("navbar")
+        )}
       </div>
     </>
   );

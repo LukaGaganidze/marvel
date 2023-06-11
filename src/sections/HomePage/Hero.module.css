@@ -56,6 +56,10 @@
   color: var(--white-1);
 }
 .heading-text-optional-highlited {
+  text-decoration: none;
+  font-weight: 100;
+  letter-spacing: 1px;
+
   background: linear-gradient(
     to right,
     var(--main-color-pink),
@@ -168,7 +172,7 @@
     font-size: 1.8rem;
   }
 }
-@media (max-width: 380px) {
+@media (max-width: 430px) {
   .text-container {
     display: none;
   }

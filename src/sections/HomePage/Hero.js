@@ -1,4 +1,5 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
+import { Link } from "react-router-dom";
 
 import classes from "./Hero.module.css";
 
@@ -46,18 +47,18 @@ const Hero = () => {
           <span className={classes["heading-text-optional"]}>
             Explore Marvel
           </span>
-          <span className={classes["heading-text-optional-highlited"]}>
+          <Link className={classes["heading-text-optional-highlited"]}>
             characters
-          </span>
-          <span className={classes["heading-text-optional-highlited"]}>
+          </Link>
+          <Link className={classes["heading-text-optional-highlited"]}>
             series
-          </span>
-          <span className={classes["heading-text-optional-highlited"]}>
+          </Link>
+          <Link className={classes["heading-text-optional-highlited"]}>
             creators
-          </span>
-          <span className={classes["heading-text-optional-highlited"]}>
+          </Link>
+          <Link className={classes["heading-text-optional-highlited"]}>
             comics
-          </span>
+          </Link>
           <span className={classes["heading-text-optional"]}>
             and much more!
           </span>

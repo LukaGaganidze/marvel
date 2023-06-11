@@ -114,7 +114,8 @@ const SearchCreator = (props) => {
             </span>
           </div>
         </div>
-        <div>
+
+        <div className={classes["input-box"]}>
           <label className={classes["search-lbl"]} htmlFor="searchCr">
             <MagnifyingGlass className={classes["search-svg"]} />
           </label>

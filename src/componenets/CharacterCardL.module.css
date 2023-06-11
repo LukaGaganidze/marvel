@@ -1,5 +1,5 @@
 .character-card-L {
-  width: 25rem;
+  max-width: 25rem;
   height: 47rem;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.266);
 
@@ -29,11 +29,13 @@
 .card-char-name {
   height: 7rem;
 }
-
-.card-char--text-box p {
+.card-char--text-box {
+  height: 28rem;
+}
+.char-creator {
   height: 8rem;
 }
-.card-char--text-box p:nth-child(3) {
+.char-appearence {
   height: 8rem;
 }
 .card-char--text-box span {

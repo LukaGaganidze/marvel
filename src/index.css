@@ -28,7 +28,7 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-size: var(--font-size-default);
+  font-size: 1.8rem;
 }
 
 :root {

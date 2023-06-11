@@ -82,6 +82,7 @@
     display: block;
   }
 }
+
 @media (max-width: 580px) {
   .featured-char-list {
     grid-template-columns: repeat(1, 1fr);

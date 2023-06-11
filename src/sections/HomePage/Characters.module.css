@@ -86,6 +86,7 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     justify-items: center;
+    column-gap: 1rem;
   }
 }
 @media (max-width: 650px) {
@@ -96,7 +97,7 @@
     display: none;
   }
 }
-@media (max-width: 500px) {
+@media (max-width: 530px) {
   .characters-card-box {
     grid-template-columns: 1fr;
   }

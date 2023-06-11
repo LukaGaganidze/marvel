@@ -10,7 +10,7 @@
   background-repeat: no-repeat;
   background-position: top;
   opacity: 0.4;
-  filter: grayscale(50%) blur(5px);
+  filter: grayscale(90%) blur(1px);
   position: absolute;
   top: 0;
   left: 0;
@@ -30,7 +30,7 @@
   transition: all 0.8s;
 }
 .z-item-1 {
-  margin-top: 21rem;
+  margin-top: 12rem;
   transform: translateX(-10rem);
 }
 .z-item-2 {
@@ -58,13 +58,18 @@
 
 @media (max-width: 1320px) {
   .z-item-1 {
-    margin-top: 40rem;
+    margin-top: 37rem;
+  }
+}
+@media (max-width: 1150px) {
+  .z-item-1 {
+    margin-top: 33rem;
   }
 }
 
-@media (max-width: 705px) {
+@media (max-width: 900px) {
   .z-item-1 {
-    margin-top: 65rem;
+    margin-top: 1rem;
   }
 }
 
@@ -72,9 +77,6 @@
   .optional-series-heading {
     text-align: center;
     font-size: 3.2rem;
-  }
-  .z-item-1 {
-    margin-top: 140rem;
   }
 }
 

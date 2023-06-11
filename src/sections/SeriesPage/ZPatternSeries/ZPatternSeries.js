@@ -73,7 +73,7 @@ const ZPatternSeries = () => {
   return (
     <div className={classes["z-pattern-container"]}>
       {/* OPTIONAL HEADING */}
-      <h2 className={classes["optional-heading"]}>Featured Series</h2>
+      {/* <h2 className={classes["optional-heading"]}>Featured Series</h2> */}
       {/* bachground */}
       <div className={classes["z-pattern-bacground"]}></div>
 

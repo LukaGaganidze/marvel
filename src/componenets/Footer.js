@@ -8,7 +8,7 @@ import venom from "../assets/footer/venom.png";
 import html from "../assets/footer/footer-logos/html.png";
 import css from "../assets/footer/footer-logos/css.png";
 import reactjs from "../assets/footer/footer-logos/react.png";
-import redux from "../assets/footer/footer-logos/redux.png";
+import swiper from "../assets/footer/footer-logos/swiper-react.png";
 import router from "../assets/footer/footer-logos/dom.png";
 import ui from "../assets/footer/footer-logos/res-UI.png";
 
@@ -25,7 +25,7 @@ const Footer = () => {
       <div className={classes["footer-content"]}>
         <div className={classes["footer-about"]}>
           <h4 className={classes["footer-sub-heder"]}>About:</h4>
-          <p>
+          <p className={classes["project-desc"]}>
             Marvelpedia, one of my portfolio projects. As a junior front-end
             developer, my primary focus during the creation of this website was
             on its design and delivering an exceptional user experience. I
@@ -52,7 +52,7 @@ const Footer = () => {
             </div>
 
             <div className={classes["tool"]}>
-              <img className={classes["tool-img"]} src={redux} />
+              <img className={classes["tool-img"]} src={swiper} />
             </div>
 
             <div className={classes["tool"]}>
@@ -74,7 +74,7 @@ const Footer = () => {
             </a>{" "}
             to provide data for the website
           </h4>
-          <p>
+          <p className={classes["good-cityzen"]}>
             Data provided by{" "}
             <a target="_Blank" href="https://developer.marvel.com/">
               Marvel

@@ -82,6 +82,17 @@
 }
 
 /* MEDIA QUERIES */
+@media (max-width: 900px) {
+  .hero-container {
+    height: 30rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .sec-heading {
+    padding-top: 0rem;
+  }
+}
 
 @media (max-width: 635px) {
   .sec-heading {
@@ -90,7 +101,13 @@
 }
 @media (max-width: 487px) {
   .hero-container {
-    height: 40rem;
+    height: 20rem;
+    background-image: linear-gradient(
+        to left,
+        rgba(0, 0, 0, 0.5),
+        rgba(0, 0, 0, 0.5)
+      ),
+      url("../../assets/covers/SeriesCover.jpg");
   }
   .sec-heading {
     display: none;
@@ -99,12 +116,13 @@
     display: block;
     background-color: var(--main-color-pink);
     color: var(--white-1);
-    width: max-content;
-    position: absolute;
     padding: 0 1rem;
-    font-size: 4rem;
-    top: 7rem;
-    left: 50%;
-    transform: translate(-50%, 0);
+    font-size: 3.5rem;
+    font-weight: 100;
+  }
+}
+@media (max-width: 420px) {
+  .optional-heading {
+    font-size: 3rem;
   }
 }

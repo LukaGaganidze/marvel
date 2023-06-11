@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useLocation } from "react-router-dom";
 
 import SeriesHero from "../sections/SeriesPage/SeriesHero";
+import FeaturedSeriesMobile from "../sections/SeriesPage/FeaturedSeriesMobile";
 import ZPatternSeries from "../sections/SeriesPage/ZPatternSeries/ZPatternSeries";
 import SearchSeries from "../sections/SeriesPage/SearchSeries";
 import SearchedSeries from "../sections/SeriesPage/SearcherdSeries";
@@ -24,6 +25,7 @@ const SeriesHome = () => {
   return (
     <>
       <SeriesHero />
+      <FeaturedSeriesMobile />
       <ZPatternSeries />
       <SearchSeries fetchedData={getData} />
       {/* <SearchedSeries serisItems={data} /> */}

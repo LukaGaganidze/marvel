@@ -13,6 +13,10 @@ const FetchData = ({ marvelApi, navTo }) => {
       };
 
       const baseURL = marvelApi;
+
+      // to covert to https request
+      const test = baseURL.toString();
+      const tes2 = test.slice();
       const timeStamp = Date.now().toString();
       const publicKey = process.env.REACT_APP_MARVEL_PUBLIC_API_KEY;
       const privatKey = process.env.REACT_APP_MARVEL_PRIVET_API_KEY;

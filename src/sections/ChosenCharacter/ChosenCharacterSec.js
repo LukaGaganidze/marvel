@@ -16,9 +16,6 @@ const ChosenCharacterSec = ({
   image,
   description,
 }) => {
-  //  const {comicsAvalable, comics}
-  console.log(series);
-  console.log(comics);
   //  to start page on top on load
   const { pathname } = useLocation();
 

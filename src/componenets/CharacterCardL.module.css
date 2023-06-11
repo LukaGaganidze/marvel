@@ -71,3 +71,10 @@
   color: var(--white-1);
   cursor: pointer;
 }
+
+@media (max-width: 550px) {
+  .character-card-L:hover {
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.266);
+    transform: translateY(0) scale(1);
+  }
+}

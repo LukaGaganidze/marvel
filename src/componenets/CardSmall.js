@@ -1,6 +1,7 @@
 import classes from "./CardSmall.module.css";
 
 const CardSmall = (props) => {
+  console.log(props);
   return (
     <div className={classes["card-sml"]}>
       <div className={classes["card-smimg-box"]}>

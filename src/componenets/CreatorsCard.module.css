@@ -69,3 +69,11 @@
 .creator-card:hover .hover-background {
   transform: translateY(0);
 }
+
+/* MEDIA QIERIES */
+@media (max-width: 1135px) {
+  .creator-card:hover {
+    background-color: var(--color-pink-dark);
+    transform: scale(1) translateY(0rem);
+  }
+}

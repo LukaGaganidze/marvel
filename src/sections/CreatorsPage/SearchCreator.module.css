@@ -168,15 +168,21 @@
 
 @media (max-width: 925px) {
   .search-bar {
-    padding: 5rem 5rem;
+    padding: 5rem 3rem;
   }
-}
-@media (max-width: 592px) {
   .search-bar div {
     display: flex;
     align-items: stretch;
-    transform: translateX(-3.5rem);
+    transform: translateX(0rem);
     position: relative;
+  }
+}
+@media (max-width: 592px) {
+  .search-bar {
+    padding: 5rem 2rem;
+  }
+  .aphabet {
+    margin: 1rem 0;
   }
   .letter-box {
     width: 100%;

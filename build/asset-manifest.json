@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.6348919d.css",
-    "main.js": "/static/js/main.2959a75f.js",
+    "main.css": "/static/css/main.3aec8972.css",
+    "main.js": "/static/js/main.a43bd9cf.js",
     "static/media/marvel-intro.mp4": "/static/media/marvel-intro.105c7408c0eda5e5cb44.mp4",
     "static/media/assamble-2.jpg": "/static/media/assamble-2.aefb3fd3b39074e7759a.jpg",
     "static/media/background.jpg": "/static/media/background.5b73418c72b6dc36af82.jpg",
@@ -70,11 +70,11 @@
     "static/media/writer.jpg": "/static/media/writer.bcfdf04bc97d5e408e1d.jpg",
     "static/media/swiper-react.png": "/static/media/swiper-react.f05d768f2fba14bce360.png",
     "index.html": "/index.html",
-    "main.6348919d.css.map": "/static/css/main.6348919d.css.map",
-    "main.2959a75f.js.map": "/static/js/main.2959a75f.js.map"
+    "main.3aec8972.css.map": "/static/css/main.3aec8972.css.map",
+    "main.a43bd9cf.js.map": "/static/js/main.a43bd9cf.js.map"
   },
   "entrypoints": [
-    "static/css/main.6348919d.css",
-    "static/js/main.2959a75f.js"
+    "static/css/main.3aec8972.css",
+    "static/js/main.a43bd9cf.js"
   ]
 }

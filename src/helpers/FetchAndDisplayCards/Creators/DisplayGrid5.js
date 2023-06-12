@@ -7,8 +7,17 @@ const DisplayGrid5 = ({ data, navTo, loadMoreCreators = false }) => {
   console.log(navTo);
   const [loadMore, setLoadMore] = useState(false);
 
-  if (data.length > 5 && loadMoreCreators) {
-    const only5Items = data.slice(0, 5);
+  const updatedData = data.map((item) => {
+    const name = item.name;
+    const role = item.role;
+    const httpRequest = item.resourceURI.toString();
+    const httpsRequest = httpRequest.slice(4);
+    const updatedRequest = "https" + httpsRequest;
+    return { updatedRequest, name, role };
+  });
+
+  if (updatedData.length > 5 && loadMoreCreators) {
+    const only5Items = updatedData.slice(0, 5);
 
     return (
       <>
@@ -17,7 +26,7 @@ const DisplayGrid5 = ({ data, navTo, loadMoreCreators = false }) => {
             <div className={classes["creators-cards-container"]}>
               {only5Items.map((el) => (
                 <FetchCreators
-                  resourceURI={el.resourceURI}
+                  resourceURI={el.updatedRequest}
                   name={el.name}
                   role={el.role}
                   key={el.name}
@@ -39,9 +48,9 @@ const DisplayGrid5 = ({ data, navTo, loadMoreCreators = false }) => {
         ) : (
           <div className={classes["container-marg"]}>
             <div className={classes["creators-cards-container"]}>
-              {data.map((el) => (
+              {updatedData.map((el) => (
                 <FetchCreators
-                  resourceURI={el.resourceURI}
+                  resourceURI={el.updatedRequest}
                   name={el.name}
                   role={el.role}
                   key={el.name}
@@ -58,9 +67,9 @@ const DisplayGrid5 = ({ data, navTo, loadMoreCreators = false }) => {
   return (
     <div className={classes["container-marg"]}>
       <div className={classes["creators-cards-container"]}>
-        {data.map((el) => (
+        {updatedData.map((el) => (
           <FetchCreators
-            resourceURI={el.resourceURI}
+            resourceURI={el.updatedRequest}
             name={el.name}
             role={el.role}
             key={el.name}

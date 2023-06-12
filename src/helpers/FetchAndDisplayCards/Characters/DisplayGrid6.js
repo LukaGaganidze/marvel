@@ -7,9 +7,17 @@ const DisplayCharacterCardsGrid = ({ data, navTo, loadMoreChars }) => {
   // loader btn and card states
   const [loadMore, setLoadMore] = useState(false);
 
+  const updatedData = data.map((item) => {
+    const name = item.name;
+    const httpRequest = item.resourceURI.toString();
+    const httpsRequest = httpRequest.slice(4);
+    const updatedRequest = "https" + httpsRequest;
+    return { updatedRequest, name };
+  });
+
   // if more then 6 characters render 6 cards and loader btn
-  if (data.length > 6 && loadMoreChars) {
-    const toBeLoaded = data.slice(0, 6);
+  if (updatedData.length > 6 && loadMoreChars) {
+    const toBeLoaded = updatedData.slice(0, 6);
     return (
       <>
         {!loadMore ? (
@@ -17,9 +25,9 @@ const DisplayCharacterCardsGrid = ({ data, navTo, loadMoreChars }) => {
             <div className={classes["characters-container"]}>
               {toBeLoaded.map((el) => (
                 <FetchCharacters
-                  data={el.resourceURI}
+                  data={el.updatedRequest}
                   navTo={navTo}
-                  key={el.resourceURI.toString()}
+                  key={el.updatedRequest.toString()}
                 />
               ))}
             </div>
@@ -39,11 +47,11 @@ const DisplayCharacterCardsGrid = ({ data, navTo, loadMoreChars }) => {
             <div
               className={`${classes["characters-container"]} ${classes["characters-container-extended"]}`}
             >
-              {data.map((el) => (
+              {updatedData.map((el) => (
                 <FetchCharacters
-                  data={el.resourceURI}
+                  data={el.updatedRequest}
                   navTo={navTo}
-                  key={el.resourceURI.toString()}
+                  key={el.updatedRequest.toString()}
                 />
               ))}
             </div>
@@ -59,11 +67,11 @@ const DisplayCharacterCardsGrid = ({ data, navTo, loadMoreChars }) => {
       <div
         className={`${classes["characters-container"]} ${classes["characters-container-extended"]}`}
       >
-        {data.map((el) => (
+        {updatedData.map((el) => (
           <FetchCharacters
-            data={el.resourceURI}
+            data={el.updatedRequest}
             navTo={navTo}
-            key={el.resourceURI.toString()}
+            key={el.updatedRequest.toString()}
           />
         ))}
       </div>

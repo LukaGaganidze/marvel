@@ -47,6 +47,7 @@
   box-shadow: 0 15px 15px rgba(0, 0, 0, 0.134);
   transform: translateY(-1rem) scale(1.02);
 }
+
 .char-card--btn:link,
 .char-card--btn:visited {
   text-decoration: none;

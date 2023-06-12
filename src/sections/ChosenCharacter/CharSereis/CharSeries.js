@@ -2,7 +2,7 @@ import DisplayComicsGrid from "../../../helpers/FetchAndDisplayCards/ComicsSerie
 
 const CharSeries = ({ seriesData }) => {
   const { series, seriesAvalable } = seriesData;
-  return <DisplayComicsGrid data={series} navTo={"/series/"} />;
+  return <DisplayComicsGrid loadMore={true} data={series} navTo={"/series/"} />;
 };
 
 export default CharSeries;

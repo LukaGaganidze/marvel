@@ -3,11 +3,11 @@ import classes from "./DisplayGrid5.module.css";
 
 import FetchCreators from "./FetchCreators";
 
-const DisplayGrid5 = ({ data, navTo }) => {
+const DisplayGrid5 = ({ data, navTo, loadMoreCreators = false }) => {
   console.log(navTo);
   const [loadMore, setLoadMore] = useState(false);
 
-  if (data.length > 5) {
+  if (data.length > 5 && loadMoreCreators) {
     const only5Items = data.slice(0, 5);
 
     return (

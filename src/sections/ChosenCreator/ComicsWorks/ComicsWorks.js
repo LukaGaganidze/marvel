@@ -19,7 +19,7 @@ const ComicsWorks = ({ comics, firstName }) => {
       />
 
       {/* cards */}
-      <DisplayGridComics data={items} navTo={"/comics/"} />
+      <DisplayGridComics loadMore={true} data={items} navTo={"/comics/"} />
     </div>
   );
 };

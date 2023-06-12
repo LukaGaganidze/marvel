@@ -34,3 +34,44 @@
   align-items: center;
   padding: 0 1rem;
 }
+
+/* MEDIA QUERIS */
+@media (max-width: 600px) {
+  .comic-link:link,
+  .comic-link:visited {
+    width: 20rem;
+  }
+  .comic-link:hover,
+  .comic-link:active {
+    transform: translateY(-0.5rem);
+  }
+  .img-box {
+    width: 20rem;
+    height: 25rem;
+  }
+
+  .text-box {
+    height: 10rem;
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .comic-link:link,
+  .comic-link:visited {
+    width: 17rem;
+  }
+  .comic-link:hover,
+  .comic-link:active {
+    transform: translateY(-0.5rem);
+  }
+  .img-box {
+    width: 17rem;
+    height: 23rem;
+  }
+
+  .text-box {
+    height: 8rem;
+    font-size: 1rem;
+  }
+}

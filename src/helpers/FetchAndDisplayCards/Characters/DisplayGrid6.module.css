@@ -1,5 +1,5 @@
 .container-marg {
-  width: var(--container-width);
+  max-width: var(--container-width);
   margin: var(--container-center);
   margin-bottom: var(--margin-large);
   position: relative;
@@ -15,9 +15,8 @@
 /* button */
 .btn-box {
   margin: var(--container-center);
-  width: var(--container-width);
+  width: 100%;
   text-align: center;
-  margin-top: 2rem;
   margin-bottom: 2rem;
 
   position: absolute;
@@ -42,4 +41,40 @@
 }
 .btn-box button:active {
   transform: translateY(0.1rem);
+}
+
+/* MEDIA QUERIES */
+@media (max-width: 1000px) {
+  .characters-container {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
+@media (max-width: 860px) {
+  .characters-container {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+@media (max-width: 690px) {
+  .characters-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media (max-width: 600px) {
+  .btn-box {
+    bottom: -7rem;
+  }
+  .btn-box button {
+    padding: 1rem 1rem;
+    font-size: 1rem;
+  }
+}
+@media (max-width: 530px) {
+  .characters-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 340px) {
+  .characters-container {
+    grid-template-columns: repeat(1, 1fr);
+  }
 }

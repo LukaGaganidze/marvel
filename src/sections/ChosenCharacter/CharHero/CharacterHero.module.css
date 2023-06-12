@@ -18,7 +18,7 @@
 
 .char-pg-container {
   margin: var(--container-center);
-  width: var(--container-width);
+  max-width: var(--container-width);
 }
 
 .srch-char-text-box {
@@ -69,4 +69,121 @@
 }
 .srch-comic-name-2 {
   font-size: 6rem;
+}
+
+/* MEDIA QUERIS */
+
+@media (max-width: 900px) {
+  .hero-char {
+    width: 100%;
+    height: 30rem;
+  }
+  .srch-char-img-box {
+    height: 30rem;
+  }
+  /* WHEN WE HAVE DESCRIPTION */
+  .srch-char-text-box {
+    padding: 0 1rem;
+  }
+  .srch-comic-name {
+    font-size: 4rem;
+  }
+  .srch-desc {
+    font-size: 1.8rem;
+  }
+
+  /* WHEN WE HAVE NO DESCRIPTION */
+
+  .srch-char-text-box-2 {
+  }
+  .srch-comic-name-2 {
+    font-size: 4rem;
+  }
+}
+
+@media (max-width: 850px) {
+  /* WHEN WE HAVE DESCRIPTION */
+
+  .srch-comic-name {
+    font-size: 3rem;
+  }
+  .srch-desc {
+    font-size: 1.4rem;
+  }
+
+  /* WHEN WE HAVE NO DESCRIPTION */
+
+  .srch-comic-name-2 {
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 700px) {
+  .char-hero-flex {
+    display: flex;
+    gap: 1rem;
+  }
+}
+@media (max-width: 650px) {
+  .char-hero-flex {
+    display: flex;
+    gap: 1rem;
+  }
+  .hero-char {
+    height: 25rem;
+  }
+  .srch-char-img-box {
+    height: 25rem;
+  }
+
+  /* WHEN WE HAVE DESCRIPTION */
+
+  .srch-comic-name {
+    font-size: 2rem;
+  }
+  .srch-desc {
+    font-size: 1rem;
+  }
+
+  /* WHEN WE HAVE NO DESCRIPTION */
+
+  .srch-comic-name-2 {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 500px) {
+  .hero-char {
+    clip-path: polygon(0 0, 100% 0, 100% 95%, 0 100%);
+  }
+  .char-hero-flex {
+    flex-direction: column;
+  }
+  .hero-char {
+    height: auto;
+  }
+  .srch-char-img-box {
+    height: auto;
+    width: 100%;
+  }
+  .srch-char-img {
+    width: 100%;
+  }
+
+  .srch-char-text-box {
+    margin-top: 1rem;
+  }
+  .srch-desc {
+    padding-bottom: 4rem;
+
+    font-size: 1.6rem;
+    height: auto;
+    overflow-y: scroll;
+  }
+}
+
+@media (max-width: 350px) {
+  .srch-desc {
+    font-size: 1.4rem;
+  }
 }

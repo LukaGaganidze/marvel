@@ -14,6 +14,7 @@ const ChosenSeriesCreators = ({ creatorsData }) => {
         seriesName={null}
       />
       <DisplayCreatorsCardsGrid
+        loadMoreCreators={true}
         data={creatorsData.items}
         navTo={"/creators/"}
       />

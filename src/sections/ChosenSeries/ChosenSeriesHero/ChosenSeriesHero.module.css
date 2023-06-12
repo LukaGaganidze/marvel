@@ -1,5 +1,4 @@
 /*HERO */
-
 .hero-char {
   background: linear-gradient(var(--main-color-pink), var(--main-color-black));
   border-top: solid #fff 1px;
@@ -18,7 +17,7 @@
 
 .char-pg-container {
   margin: var(--container-center);
-  width: var(--container-width);
+  max-width: var(--container-width);
 }
 
 .srch-char-text-box {
@@ -56,4 +55,110 @@
 .optional-info {
   color: var(--white-1);
   font-size: 5rem;
+  text-align: center;
+  padding: 0 2rem;
+}
+
+/* MEDIA QUERIES */
+
+@media (max-width: 1150px) {
+  .optional-info {
+    font-size: 4rem;
+  }
+}
+@media (max-width: 1000px) {
+  .hero-char {
+    clip-path: none;
+  }
+  .char-hero-flex {
+    flex-direction: column;
+    gap: 0rem;
+    align-items: center;
+  }
+  .srch-char-text-box {
+    margin-top: 2rem;
+    padding-bottom: 5rem;
+  }
+  .srch-comic-name {
+    font-size: 4rem;
+    letter-spacing: 2px;
+  }
+  .srch-comic-year {
+    font-size: 4rem;
+    text-align: center;
+  }
+}
+
+@media (max-width: 750px) {
+  .srch-comic-name {
+    font-size: 2.5rem;
+    letter-spacing: 2px;
+  }
+  .srch-comic-year {
+    font-size: 2rem;
+    text-align: center;
+  }
+  .optional-info {
+    color: var(--white-1);
+    font-size: 2.5rem;
+  }
+  .srch-char-text-box {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+@media (max-width: 430px) {
+  .srch-char-img-box {
+    height: 30rem;
+  }
+  .srch-comic-name {
+    font-size: 2rem;
+    letter-spacing: 2px;
+  }
+  .srch-comic-year {
+    font-size: 1.8rem;
+    text-align: center;
+  }
+  .optional-info {
+    color: var(--white-1);
+    font-size: 2rem;
+  }
+
+  .optional-hero-container {
+    height: 20rem;
+  }
+}
+@media (max-width: 340px) {
+  .srch-char-img-box {
+    height: 25rem;
+  }
+  .srch-comic-name {
+    font-size: 1.6rem;
+    letter-spacing: 2px;
+  }
+  .srch-comic-year {
+    font-size: 1.4rem;
+    text-align: center;
+  }
+  .optional-info {
+    color: var(--white-1);
+    font-size: 1.6rem;
+  }
+}
+@media (max-width: 275px) {
+  .srch-char-img-box {
+    height: 22rem;
+  }
+  .srch-comic-name {
+    font-size: 1.4rem;
+    letter-spacing: 2px;
+  }
+  .srch-comic-year {
+    font-size: 1.2rem;
+    text-align: center;
+  }
+  .optional-info {
+    color: var(--white-1);
+    font-size: 1.4rem;
+  }
 }

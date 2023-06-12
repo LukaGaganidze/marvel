@@ -22,7 +22,11 @@ const ComicsCharacters = ({ characters }) => {
         seriesName={null}
       />
       {/* chars */}
-      <DisplayCharacterCardsGrid data={items} navTo={"/characters/"} />
+      <DisplayCharacterCardsGrid
+        loadMoreChars={true}
+        data={items}
+        navTo={"/characters/"}
+      />
     </div>
   );
 };

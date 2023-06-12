@@ -3,7 +3,7 @@ import classes from "./CharComics.module.css";
 
 const CharComics = ({ comicsData }) => {
   const { comics, comicsAvalable } = comicsData;
-  return <DisplayComicsGrid data={comics} navTo={"/comics/"} />;
+  return <DisplayComicsGrid loadMore={true} data={comics} navTo={"/comics/"} />;
 };
 
 export default CharComics;

@@ -58,7 +58,11 @@ const ComicsSeries = ({ series }) => {
 
       {/* Comics in this Series */}
       <div className={classes["comic-series"]}>
-        <DisplaySereisGrid data={comicsInSerie} navTo={"/comics/"} />
+        <DisplaySereisGrid
+          data={comicsInSerie}
+          navTo={"/comics/"}
+          loadMore={true}
+        />
       </div>
     </div>
   );

@@ -1,5 +1,5 @@
 .container-marg {
-  width: var(--container-width);
+  max-width: var(--container-width);
   margin: var(--container-center);
   margin-bottom: var(--margin-large);
   position: relative;
@@ -14,9 +14,8 @@
 
 .btn-box {
   margin: var(--container-center);
-  width: var(--container-width);
+  width: 100%;
   text-align: center;
-  margin-top: 2rem;
   margin-bottom: 2rem;
 
   position: absolute;
@@ -41,4 +40,30 @@
 }
 .btn-box button:active {
   transform: translateY(0.1rem);
+}
+
+/* MEDIA QUERIS */
+@media (max-width: 1100px) {
+  .data-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media (max-width: 830px) {
+  .data-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 600px) {
+  .btn-box {
+    bottom: -7rem;
+  }
+  .btn-box button {
+    padding: 1rem 1rem;
+    font-size: 1rem;
+  }
+}
+@media (max-width: 350px) {
+  .data-container {
+    grid-template-columns: repeat(1, 1fr);
+  }
 }

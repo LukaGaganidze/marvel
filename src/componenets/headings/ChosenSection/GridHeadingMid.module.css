@@ -25,3 +25,58 @@
   letter-spacing: 1px;
   font-size: 2rem;
 }
+
+/* MEDIA QUERIES */
+
+@media (max-width: 1000px) {
+  .creators-Series-heading {
+    padding-left: 1rem;
+  }
+  .creators-Series-heading h3 {
+    font-size: 3rem;
+  }
+
+  .heading-info-box span:first-child {
+    font-size: 1.6rem;
+  }
+  .heading-info-box span:last-child {
+    letter-spacing: 1px;
+    font-size: 1.8rem;
+  }
+}
+@media (max-width: 700px) {
+  .creators-Series-heading h3 {
+    font-size: 2rem;
+  }
+
+  .heading-info-box span:first-child {
+    font-size: 1.2rem;
+  }
+  .heading-info-box span:last-child {
+    font-size: 1.6rem;
+  }
+}
+@media (max-width: 500px) {
+  .creators-Series-heading h3 {
+    font-size: 1.8rem;
+  }
+
+  .heading-info-box span:first-child {
+    font-size: 1rem;
+  }
+  .heading-info-box span:last-child {
+    font-size: 1.4rem;
+  }
+}
+@media (max-width: 400px) {
+  .creators-Series-heading h3 {
+    font-size: 1.6rem;
+  }
+
+  .heading-info-box span:first-child {
+    font-size: 1rem;
+  }
+  .heading-info-box span:last-child {
+    font-size: 1.2rem;
+  }
+}

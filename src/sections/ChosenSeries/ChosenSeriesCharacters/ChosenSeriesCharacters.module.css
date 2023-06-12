@@ -1,4 +1,4 @@
 .chos-series-char-container {
   margin: var(--container-center);
-  width: var(--container-width);
+  max-width: var(--container-width);
 }

@@ -1,9 +1,9 @@
 .creators-comics {
   margin: var(--container-center);
-  width: var(--container-width);
+  max-width: var(--container-width);
 }
 
-.creators-comics-heading {
+/* .creators-comics-heading {
   margin-bottom: var(--margin-small-plus);
 }
 
@@ -29,4 +29,4 @@
 .heading-info-box span:last-child {
   letter-spacing: 1px;
   font-size: 2rem;
-}
+} */

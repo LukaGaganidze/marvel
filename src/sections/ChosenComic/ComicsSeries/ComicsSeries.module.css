@@ -1,5 +1,5 @@
 .comic-series-sec {
   margin: var(--container-center);
-  width: var(--container-width);
+  max-width: var(--container-width);
   margin-top: var(--margin-large);
 }

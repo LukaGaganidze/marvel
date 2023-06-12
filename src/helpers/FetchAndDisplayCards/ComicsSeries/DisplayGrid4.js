@@ -7,14 +7,20 @@ import classes from "./DisplayGrid4.module.css";
 const DisplatDataGrid = ({ data, navTo, loadMore = false }) => {
   const [loadMoreData, setLoadMoreData] = useState(false);
 
-  console.log(data);
+  const updatedData = data.map((item) => {
+    const name = item.name;
+    const httpRequest = item.resourceURI.toString();
+    const httpsRequest = httpRequest.slice(4);
+    const updatedRequest = "https" + httpsRequest;
+    return { updatedRequest, name };
+  });
 
   const wordFormating = navTo.slice(1, -1);
   const optionalButtonWord =
     wordFormating[0].toUpperCase() + wordFormating.slice(1, -1) + "s";
 
-  if (data.length > 4 && loadMore) {
-    const toBeLoaded = data.slice(0, 4);
+  if (updatedData.length > 4 && loadMore) {
+    const toBeLoaded = updatedData.slice(0, 4);
     return (
       <>
         {!loadMoreData ? (
@@ -23,7 +29,7 @@ const DisplatDataGrid = ({ data, navTo, loadMore = false }) => {
               {toBeLoaded.map((item) => (
                 <FetchData
                   key={item.name || item.title}
-                  marvelApi={item.resourceURI}
+                  marvelApi={item.updatedRequest}
                   name={item.name}
                   navTo={navTo}
                 />
@@ -43,10 +49,10 @@ const DisplatDataGrid = ({ data, navTo, loadMore = false }) => {
         ) : (
           <div className={classes["container-marg"]}>
             <div className={classes["data-container"]}>
-              {data.map((item) => (
+              {updatedData.map((item) => (
                 <FetchData
                   key={item.name || item.title}
-                  marvelApi={item.resourceURI}
+                  marvelApi={item.updatedRequest}
                   name={item.name}
                   navTo={navTo}
                 />
@@ -61,10 +67,10 @@ const DisplatDataGrid = ({ data, navTo, loadMore = false }) => {
   return (
     <div className={classes["container-marg"]}>
       <div className={classes["data-container"]}>
-        {data.map((item) => (
+        {updatedData.map((item) => (
           <FetchData
             key={item.name || item.title}
-            marvelApi={item.resourceURI}
+            marvelApi={item.updatedRequest}
             name={item.name}
             navTo={navTo}
           />

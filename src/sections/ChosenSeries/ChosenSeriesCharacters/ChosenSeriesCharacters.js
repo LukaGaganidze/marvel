@@ -15,6 +15,7 @@ const ChosenSeriesCharacters = ({ charactersData }) => {
         seriesName={null}
       />
       <DisplayCharactersCardsGrid
+        loadMoreChars={true}
         data={charactersData.items}
         navTo={"/characters/"}
       />

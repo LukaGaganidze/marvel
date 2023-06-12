@@ -1,5 +1,5 @@
 .container-marg {
-  width: var(--container-width);
+  max-width: var(--container-width);
   margin: var(--container-center);
   margin-bottom: var(--margin-large);
   position: relative;
@@ -10,7 +10,7 @@
   grid-template-columns: repeat(5, 1fr);
   row-gap: 4rem;
   justify-items: center;
-  width: var(--container-width);
+  max-width: var(--container-width);
   margin: var(--container-center);
   margin-bottom: var(--margin-large);
   position: relative;
@@ -19,9 +19,8 @@
 /* btn */
 .btn-box {
   margin: var(--container-center);
-  width: var(--container-width);
+  width: 100%;
   text-align: center;
-  margin-top: 2rem;
   margin-bottom: 2rem;
 
   position: absolute;
@@ -46,4 +45,35 @@
 }
 .btn-box button:active {
   transform: translateY(0.1rem);
+}
+
+/* MEDIA  QURIES */
+@media (max-width: 1100px) {
+  .creators-cards-container {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+@media (max-width: 877px) {
+  .creators-cards-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media (max-width: 655px) {
+  .creators-cards-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 600px) {
+  .btn-box {
+    bottom: -7rem;
+  }
+  .btn-box button {
+    padding: 1rem 1rem;
+    font-size: 1rem;
+  }
+}
+@media (max-width: 430px) {
+  .creators-cards-container {
+    grid-template-columns: repeat(1, 1fr);
+  }
 }

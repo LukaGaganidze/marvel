@@ -47,16 +47,28 @@ const Hero = () => {
           <span className={classes["heading-text-optional"]}>
             Explore Marvel
           </span>
-          <Link className={classes["heading-text-optional-highlited"]}>
+          <Link
+            to="/characters"
+            className={classes["heading-text-optional-highlited"]}
+          >
             characters
           </Link>
-          <Link className={classes["heading-text-optional-highlited"]}>
+          <Link
+            to="/series"
+            className={classes["heading-text-optional-highlited"]}
+          >
             series
           </Link>
-          <Link className={classes["heading-text-optional-highlited"]}>
+          <Link
+            to="/creators"
+            className={classes["heading-text-optional-highlited"]}
+          >
             creators
           </Link>
-          <Link className={classes["heading-text-optional-highlited"]}>
+          <Link
+            to="/comics"
+            className={classes["heading-text-optional-highlited"]}
+          >
             comics
           </Link>
           <span className={classes["heading-text-optional"]}>

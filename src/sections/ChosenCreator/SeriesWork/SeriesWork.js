@@ -19,7 +19,7 @@ const SeriesWork = ({ series, firstName }) => {
       />
 
       {/* cards */}
-      <DisplayGridSeries data={items} navTo={"/series/"} />
+      <DisplayGridSeries loadMore={true} data={items} navTo={"/series/"} />
     </div>
   );
 };

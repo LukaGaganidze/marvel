@@ -14,7 +14,11 @@ const ChosenSeriesComics = ({ comicsData }) => {
         available={comicsData.returned}
         seriesName={null}
       />
-      <DisplaySeriesGrid data={comicsData.items} navTo={"/comics/"} />
+      <DisplaySeriesGrid
+        loadMore={true}
+        data={comicsData.items}
+        navTo={"/comics/"}
+      />
     </div>
   );
 };

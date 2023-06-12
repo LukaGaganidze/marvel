@@ -6,7 +6,7 @@ const GridHeadingMin = ({ headingFor, total, available, seriesName }) => {
   return (
     <div className={classes["heading-box"]}>
       <h2 className={classes["main-heading"]}>
-        <span>{headingFor}</span>
+        <span className={classes["for"]}>{headingFor}</span>
       </h2>
       {seriesName ? (
         <h3 className={classes["main-heading-optional"]}>{seriesName}</h3>
@@ -15,13 +15,13 @@ const GridHeadingMin = ({ headingFor, total, available, seriesName }) => {
       )}
 
       <div className={classes["secondary-heading"]}>
-        <span>Total {headingFor}:</span>
-        <span>{total}</span>
+        <span className={classes["total"]}>Total {headingFor}:</span>
+        <span className={classes["total-num"]}>{total}</span>
       </div>
 
       <div className={classes["secondary-heading"]}>
-        <span>Avalable: </span>
-        <span>{available}</span>
+        <span className={classes["available"]}>Avalable: </span>
+        <span className={classes["available-num"]}>{available}</span>
       </div>
     </div>
   );

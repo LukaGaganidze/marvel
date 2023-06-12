@@ -16,8 +16,6 @@ const ChosenCharacter = () => {
 
   const loader = useLoaderData();
 
-  console.log(loader);
-
   const data = loader.data.results[0];
 
   const name = data.name;

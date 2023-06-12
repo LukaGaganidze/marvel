@@ -20,7 +20,11 @@ const CreatorsList = ({ creators }) => {
       />
 
       {/* creator card */}
-      <DisplayCreatorsGridCards data={creators.items} navTo={"/creators/"} />
+      <DisplayCreatorsGridCards
+        loadMoreCreators={true}
+        data={creators.items}
+        navTo={"/creators/"}
+      />
     </div>
   );
 };

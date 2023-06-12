@@ -1,8 +1,36 @@
 .creators-card-container {
-  width: var(--container-width);
+  max-width: var(--container-width);
   margin: var(--container-center);
 
   display: grid;
   grid-template-columns: repeat(6, 1fr);
-  row-gap: 6rem;
+  justify-items: center;
+  row-gap: 3rem;
+}
+
+@media (max-width: 1250px) {
+  .creators-card-container {
+    padding: 0 1rem;
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
+@media (max-width: 1050px) {
+  .creators-card-container {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+@media (max-width: 850px) {
+  .creators-card-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media (max-width: 625px) {
+  .creators-card-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 420px) {
+  .creators-card-container {
+    grid-template-columns: repeat(1, 1fr);
+  }
 }

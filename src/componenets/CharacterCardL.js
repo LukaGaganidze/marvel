@@ -1,9 +1,17 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React, { useState } from "react";
+import { Link, useNavigation } from "react-router-dom";
 
 import classes from "./CharacterCardL.module.css";
 
+import LoadingSpinner from "../assets/svg/LoadingSpinner";
+
 const CharacterCardL = (props) => {
+  const { state } = useNavigation();
+  const [click, setClick] = useState(false);
+  const clickHandler = () => {
+    setClick(true);
+  };
+
   return (
     <div className={classes["character-card-L"]}>
       <div className={classes["char--img-bx"]}>
@@ -16,20 +24,29 @@ const CharacterCardL = (props) => {
 
       <div className={classes["card-char--text-box"]}>
         <h2 className={classes["card-char-name"]}>{props.name}</h2>
-        <p className={classes["char-creator"]}>
-          <span>creator</span>
-          <br />
-          {props.creator}
-        </p>
-        <p className={classes["char-appearence"]}>
-          <span>first appearence</span>
-          <br />
-          {props.firstAppearence}
-        </p>
-
-        <Link to={props.path} className={classes["char-card--btn"]}>
-          Check Character
-        </Link>
+        <div className={classes["char-creator"]}>
+          <p>creator</p>
+          <p> {props.creator}</p>
+        </div>
+        <div className={classes["char-appearence"]}>
+          <p>first appearence</p>
+          <p>{props.firstAppearence}</p>
+        </div>
+        {click && state === "loading" ? (
+          <div className={classes["btn-loading-state"]}>
+            <LoadingSpinner className={classes["loading-spinner"]} />
+          </div>
+        ) : (
+          <>
+            <Link
+              onClick={clickHandler}
+              to={props.path}
+              className={classes["char-card--btn"]}
+            >
+              Check Character
+            </Link>
+          </>
+        )}
       </div>
     </div>
   );

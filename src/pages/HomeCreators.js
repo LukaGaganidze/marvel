@@ -24,7 +24,7 @@ const CreatorsHome = () => {
     <>
       <CreatorsHero />
       <SearchCreator creatorsData={getCreatorsFetchResults} />
-      {/* <CreatorsSearchResults searchResults={creators} /> */}
+      <CreatorsSearchResults searchResults={creators} />
     </>
   );
 };

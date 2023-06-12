@@ -28,7 +28,7 @@ const SeriesHome = () => {
       <FeaturedSeriesMobile />
       <ZPatternSeries />
       <SearchSeries fetchedData={getData} />
-      {/* <SearchedSeries serisItems={data} /> */}
+      <SearchedSeries serisItems={data} />
     </>
   );
 };

@@ -80,7 +80,10 @@
   }
 }
 
-@media (max-width: 400px) {
+@media (max-width: 405px) {
+  .z-item {
+    display: none;
+  }
   .optional-series-heading {
     text-align: center;
     font-size: 2.2rem;

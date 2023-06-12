@@ -11,6 +11,7 @@
   background-position: top;
   background-repeat: no-repeat;
   background-size: cover;
+  margin-bottom: 3rem;
 }
 .search-container.active {
   width: 100%;
@@ -232,7 +233,6 @@
   .search-container.active {
     width: 100%;
     opacity: 1;
-    transform: translateY(-8rem);
   }
   .search-bar-heading {
     font-size: 1.6rem;

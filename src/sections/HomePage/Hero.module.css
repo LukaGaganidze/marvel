@@ -173,11 +173,14 @@
   }
 }
 @media (max-width: 430px) {
+  .hero-section {
+    height: auto;
+  }
   .text-container {
     display: none;
   }
   .alternative-text {
     display: block;
-    padding-top: 1rem;
+    padding: 2rem 0;
   }
 }

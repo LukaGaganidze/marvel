@@ -173,7 +173,8 @@
 @media (max-width: 500px) {
   .creators-sec {
     /* height: 100vh; */
-    height: 87rem;
+    height: max-content;
+    background-color: red;
   }
   .creators-optional {
     width: 100%;
@@ -191,7 +192,7 @@
 }
 @media (max-width: 320px) {
   .creators-sec {
-    height: 85rem;
+    height: max-content;
   }
   .creators-optional {
     font-size: 3rem;

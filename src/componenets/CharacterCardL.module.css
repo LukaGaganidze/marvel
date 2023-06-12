@@ -38,7 +38,7 @@
 .char-appearence {
   height: 8rem;
 }
-.card-char--text-box span {
+.card-char--text-box div p:first-child {
   color: var(--white-2);
   color: #999999;
 }
@@ -53,6 +53,10 @@
   text-decoration: none;
   display: inline-block;
   text-align: center;
+  height: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .char-card--btn {
   width: 100%;
@@ -64,7 +68,6 @@
   color: var(--main-color-pink);
   cursor: pointer;
   transition: all 0.3s;
-  padding: 0.6rem;
 }
 .char-card--btn:hover {
   border: solid 1px var(--main-color-pink);
@@ -73,9 +76,45 @@
   cursor: pointer;
 }
 
+/* loading state */
+
+.btn-loading-state {
+  border: solid 1px var(--main-color-pink);
+
+  height: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.loading-spinner {
+  transform: scale(0.4) translateX(-2rem) translateY(-3rem);
+}
+
 @media (max-width: 550px) {
   .character-card-L:hover {
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.266);
     transform: translateY(0) scale(1);
   }
+  .card-char-name {
+    height: 5rem;
+    font-size: 2.4rem;
+  }
+  .card-char--text-box div {
+    font-size: 1.3rem;
+  }
+
+  .char-creator {
+    height: 6rem;
+  }
+  .char-appearence {
+    height: 7rem;
+  }
+  .card-char--text-box {
+    height: max-content;
+  }
+  .character-card-L {
+    height: max-content;
+  }
 }
+
+/* LOADING SPINNER */

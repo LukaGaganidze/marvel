@@ -2,7 +2,7 @@
   max-width: var(--container-width);
   margin: var(--container-center);
   margin-top: 5rem;
-  margin-bottom: var(--margin-section);
+  margin-bottom: var(--margin-mid);
 }
 /* heading */
 .heading h2 {

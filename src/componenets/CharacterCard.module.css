@@ -5,14 +5,35 @@
   border-radius: 0.5rem;
   overflow: hidden;
 }
+
 .img-box {
   width: 23rem;
   height: 31rem;
   overflow: hidden;
+  position: relative;
 }
+
+/* LOADING SPINNER */
+.spinning-svg {
+  display: none;
+  position: absolute;
+  top: 10rem;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.active-card .spinning-svg {
+  display: block;
+}
+
 .img-box img {
   width: 100%;
   transition: all 0.4s;
+}
+.featured-chars-link:link,
+.featured-chars-link:visited {
+  color: black;
+  text-decoration: none;
 }
 .text-box {
   border: solid rgba(0, 0, 0, 0.463) 1px;

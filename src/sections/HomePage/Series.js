@@ -1,7 +1,9 @@
 import { useState, useRef, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigation } from "react-router-dom";
 
 import classes from "./Series.module.css";
+
+import LoadingDots from "../../assets/svg/LoadingDots";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Navigation } from "swiper";
@@ -52,7 +54,7 @@ const SERIES_DATA = [
     navToL: 18138,
   },
   {
-    name: "The Amazing Spider-Man",
+    name: "Spider-Man",
     period: "2018 - Present",
     image: spider,
     navToL: 24396,
@@ -93,6 +95,13 @@ const SERIES_DATA_MOBILE = [
 ];
 
 const Series = () => {
+  // LOADING UI
+  const [clicked, setClicked] = useState(false);
+  const { state } = useNavigation();
+  const seriesBtnCickHandler = () => {
+    setClicked(true);
+  };
+
   // SLIDE IN EFFECT (INTERSECTIONOBSERVER)
   const [isVisible, setIsVisible] = useState(false);
   const componenetRef = useRef(null);
@@ -172,11 +181,17 @@ const Series = () => {
                     <p className={classes["series-description"]}>
                       {item.period}
                     </p>
+
                     <Link
+                      onClick={seriesBtnCickHandler}
                       to={`/series/${item.navToL}`}
                       className={classes["series-btn"]}
                     >
-                      series: {item.name}
+                      {clicked && state === "loading" ? (
+                        <LoadingDots className={classes["loading-dots"]} />
+                      ) : (
+                        <> series: {item.name}</>
+                      )}
                     </Link>
                   </div>
                 </div>
@@ -186,7 +201,6 @@ const Series = () => {
         </div>
 
         {/* MOBILE VERSION */}
-        <h2></h2>
         <div className={classes["slider-s"]}>
           <Swiper
             slidesPerView={1}
@@ -217,10 +231,15 @@ const Series = () => {
                       {item.period}
                     </p>
                     <Link
+                      onClick={seriesBtnCickHandler}
                       to={`/series/${item.navToL}`}
                       className={classes["series-btn"]}
                     >
-                      series: {item.name}
+                      {clicked && state === "loading" ? (
+                        <LoadingDots className={classes["loading-dots"]} />
+                      ) : (
+                        <> series: {item.name}</>
+                      )}
                     </Link>
                   </div>
                 </div>

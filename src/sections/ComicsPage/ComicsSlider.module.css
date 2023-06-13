@@ -3,6 +3,9 @@
   overflow: hidden;
 }
 
+.deatured-comics-a {
+  position: relative;
+}
 .deatured-comics-a:link,
 .deatured-comics-a:visited {
   display: block;
@@ -17,12 +20,33 @@
   justify-content: center;
   overflow: hidden;
 }
+
+/* LOADING SPINNER */
+.loading-spinner-box {
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+}
+.loading-spinner-active {
+  display: block;
+}
 .deatured-comics-a:hover .background-img,
 .deatured-comics-a:active .background-img {
   opacity: 0.25;
 }
 .deatured-comics-a:hover .content,
 .deatured-comics-a:active .content {
+  opacity: 1;
+  visibility: visible;
+}
+.deatured-comics-a.active-slider .background-img,
+.deatured-comics-a.active-slider .background-img {
+  opacity: 0.25;
+}
+.deatured-comics-a.active-slider .content,
+.deatured-comics-a.active-slider .content {
   opacity: 1;
   visibility: visible;
 }

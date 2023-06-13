@@ -2,12 +2,18 @@ import React, { useEffect, useRef, useState } from "react";
 import MD5 from "crypto-js/md5";
 import classes from "./SearchChar.module.css";
 import { MagnifyingGlass } from "../../assets/svg/MagnifyingGlass";
+import LoadingCircel from "../../assets/svg/LoadingCircle";
 
 const apiURL = process.env.REACT_APP_MARVEL_BASE_URL;
 const DUMMY_APLH_STR = "A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y";
 const DUMMY_ALPH_ARR = DUMMY_APLH_STR.split(",");
 
 const SearchChar = (props) => {
+  // LOADING SPINNER UI
+  const [loadingCharacters, setLoadingCharacters] = useState(false);
+  const [formWasSubbed, setFormWasSubbed] = useState(false);
+  const [letterWasClicked, setLetterWasClicked] = useState(false);
+
   // INTERSECTION OBSERVER
   const [searchbarIsVisible, setsearchbarIsVisible] = useState(false);
   const componenetRef = useRef(null);
@@ -37,20 +43,9 @@ const SearchChar = (props) => {
   const ref = useRef();
   const [input, setInput] = useState("");
 
-  const submitHandler = (e) => {
-    e.preventDefault();
-
-    if (
-      ref.current.value === "" ||
-      ref.current.value === null ||
-      !ref.current.value
-    )
-      return;
-    setInput(ref.current.value);
-  };
-
   useEffect(() => {
     if (input === "" || input.length === 0) return;
+    setLoadingCharacters(true);
 
     const fetchData = async () => {
       const getHash = (timeStamp, privatKey, publicKey) => {
@@ -66,9 +61,10 @@ const SearchChar = (props) => {
 
       try {
         const response = await fetch(url);
+        if (response.ok) setLoadingCharacters(false);
         const data = await response.json();
-        console.log(data);
         props.data(data.data.results);
+
         return data;
       } catch (err) {
         return;
@@ -77,10 +73,30 @@ const SearchChar = (props) => {
     fetchData();
   }, [input]);
 
+  // HANDLERS
   const searchWithLettersHandler = (e) => {
     setInput(e.target.textContent);
+    setLetterWasClicked(true);
+  };
+  const submitHandler = (e) => {
+    e.preventDefault();
+
+    if (
+      ref.current.value === "" ||
+      ref.current.value === null ||
+      !ref.current.value
+    )
+      return;
+    setFormWasSubbed(true);
+    setInput(ref.current.value);
   };
 
+  // SPINNER STATE
+  const spinnerCircleActive =
+    (loadingCharacters && formWasSubbed) ||
+    (loadingCharacters && letterWasClicked);
+
+  console.log(spinnerCircleActive);
   return (
     <div
       ref={componenetRef}
@@ -88,6 +104,13 @@ const SearchChar = (props) => {
         classes[searchbarIsVisible ? "active" : ""]
       }`}
     >
+      <div
+        className={`${classes["loading-circle-container"]} ${
+          classes[spinnerCircleActive ? "loading-circle-active" : ""]
+        }`}
+      >
+        <LoadingCircel />
+      </div>
       <form onSubmit={submitHandler} className={classes["search-bar"]}>
         <div className={classes["heading-navigation"]}>
           <h2 className={classes["search-bar-heading"]}>

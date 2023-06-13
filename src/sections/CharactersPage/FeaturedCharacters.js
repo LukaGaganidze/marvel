@@ -52,14 +52,13 @@ const FeaturedCharacters = () => {
       <ul className={classes["featured-char-list"]}>
         {CHARACTERS_SECTION_CHARCTERS_DATA.map((el) => (
           <li key={el.name} className={classes["featured-chars"]}>
-            <Link className={classes["featured-chars-link"]} to={el.link}>
-              <CharacterCard
-                key={el.name}
-                name={el.name}
-                appearance={el.dirstApperance}
-                image={el.image}
-              />
-            </Link>
+            <CharacterCard
+              navTo={el.link}
+              key={el.name}
+              name={el.name}
+              appearance={el.dirstApperance}
+              image={el.image}
+            />
           </li>
         ))}
       </ul>

@@ -30,12 +30,6 @@
   margin: var(--container-center);
 }
 
-.featured-chars-link:link,
-.featured-chars-link:visited {
-  color: black;
-  text-decoration: none;
-}
-
 .featured-chars {
   animation-name: fade-in;
   animation-duration: 2s;

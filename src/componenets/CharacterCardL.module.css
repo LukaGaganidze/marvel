@@ -77,11 +77,10 @@
 }
 
 /* loading state */
-
 .btn-loading-state {
   border: solid 1px var(--main-color-pink);
+  height: 34px;
 
-  height: 35px;
   display: flex;
   align-items: center;
   justify-content: center;

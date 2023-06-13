@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 
+import { useNavigation } from "react-router-dom";
+
 import classes from "./DisplayGrid6.module.css";
 import FetchCharacters from "./FetchCharacters";
 
@@ -80,3 +82,11 @@ const DisplayCharacterCardsGrid = ({ data, navTo, loadMoreChars }) => {
 };
 
 export default DisplayCharacterCardsGrid;
+
+{
+  /* <div
+className={`${classes["loading-circle"]} ${classes["loading-circle-active"]}`}
+>
+<LoadingCircle />
+</div> */
+}

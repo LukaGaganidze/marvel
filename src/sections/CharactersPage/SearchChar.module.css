@@ -12,7 +12,23 @@
   background-repeat: no-repeat;
   background-size: cover;
   margin-bottom: 3rem;
+  position: relative;
 }
+
+/* LOADING CORCLE */
+.loading-circle-container {
+  display: none;
+  position: absolute;
+  z-index: 100;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.loading-circle-active {
+  display: block;
+}
+
+/*  */
 .search-container.active {
   width: 100%;
   opacity: 1;

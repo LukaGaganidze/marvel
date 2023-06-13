@@ -1,5 +1,6 @@
 import { useRef, useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+
+import LoadingSpinnerWhite from "../../assets/svg/LoadingSpinnerWhite";
 
 import CreatorsCard from "../../componenets/CreatorsCard";
 import backgroundVideo from "../../assets/videos/marvel-intro.mp4";
@@ -135,19 +136,16 @@ const Creators = () => {
         </h2>
         <div className={classes["creator-card-container"]}>
           {CREATORS_OBJ.map((el) => (
-            <Link
-              to={el.link}
-              className={classes["creator-card-a"]}
+            <CreatorsCard
               key={el.id}
-            >
-              <CreatorsCard
-                image={el.image}
-                firstName={el.firstName}
-                lastName={el.lastName}
-                creations={el.creations}
-                id={el.id}
-              />
-            </Link>
+              navTo={el.link}
+              image={el.image}
+              firstName={el.firstName}
+              lastName={el.lastName}
+              creations={el.creations}
+              id={el.id}
+            />
+            // <Link className={`${classes["creator-card-a"]}`}>
           ))}
         </div>
       </section>

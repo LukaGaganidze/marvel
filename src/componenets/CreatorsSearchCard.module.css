@@ -1,5 +1,7 @@
 /* CONTAINER */
-
+.creators-search-results-card {
+  position: relative;
+}
 .creators-search-results-card:link,
 .creators-search-results-card:visited {
   display: block;
@@ -22,10 +24,17 @@
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 }
 
-/* TEXT BOX */
-
-.cr-text-box {
+.loading-spinner {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
 }
+
+.card-loading-state {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+/* TEXT BOX */
 
 .cr-inner-headings {
   font-family: "Nothing You Could Do", cursive;

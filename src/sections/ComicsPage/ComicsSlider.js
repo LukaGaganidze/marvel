@@ -15,7 +15,7 @@ import { Autoplay, Pagination, Navigation } from "swiper";
 // import styles from "./ComicsSliderStyles.module.css";
 import classes from "./ComicsSlider.module.css";
 
-import LoadingSpinnerWhite from "../../assets/svg/LoadingSpinnerWhite";
+import ComicsSlideritem from "./ComicsSliderItem";
 
 // IMGS FOR SLIDER
 import img1 from "../../assets/comics-page/slider1/pic1.jpg";
@@ -165,15 +165,6 @@ const SLIDER_DATA = [
 ];
 
 const ComicsSlider = () => {
-  // SPINNER LOADING INDICATOR
-  const { state } = useNavigation();
-  const [sliderWasClicked, setSliderWasClicked] = useState(false);
-  const comicsSliderClickHandler = () => {
-    setSliderWasClicked(true);
-  };
-
-  const activeSliderLoader = state === "loading" && sliderWasClicked;
-
   return (
     <div className={classes["swiper-container"]}>
       {/* LARGE SCREEN */}
@@ -182,65 +173,27 @@ const ComicsSlider = () => {
         spaceBetween={0}
         loop={true}
         navigation={true}
-        // autoplay={{
-        //   delay: 2000,
-        //   disableOnInteraction: false,
-        // }}
+        autoplay={{
+          delay: 2000,
+          disableOnInteraction: false,
+        }}
         modules={[Autoplay, Pagination, Navigation]}
         className={classes["swiper"]}
       >
         {SLIDER_DATA.map((comic) => (
           <SwiperSlide key={comic.id}>
-            <Link
-              onClick={comicsSliderClickHandler}
-              to={`/comics/${comic.id}`}
-              className={`${classes["deatured-comics-a"]} ${
-                classes[activeSliderLoader ? "active-slider" : ""]
-              }`}
-            >
-              <div
-                className={`${classes["loading-spinner-box"]} ${classes["loading-spinner-active"]}`}
-              >
-                {activeSliderLoader && <LoadingSpinnerWhite />}
-              </div>
-              <h2
-                className={`${classes["content"]} ${classes["comic-heading"]}`}
-              >
-                {comic.comicName}
-              </h2>
-              <div
-                className={`${classes["content"]} ${classes["releasedate"]}`}
-              >
-                <span className={classes["inner-cntent-desc"]}>
-                  Release date:{" "}
-                </span>
-                <span className={classes["inner-cntent"]}>
-                  {comic.published}
-                </span>
-              </div>
-              <div
-                className={`${classes["content"]} ${classes["writer-name"]}`}
-              >
-                <span className={classes["inner-cntent-desc"]}>Writer: </span>
-                <span className={classes["inner-cntent"]}>{comic.writer}</span>
-              </div>
-              {comic.penciler !== "" ? (
-                <div className={`${classes["content"]} ${classes["penciler"]}`}>
-                  <span className={classes["inner-cntent-desc"]}>
-                    Penciler:{" "}
-                  </span>
-                  <span className={classes["inner-cntent"]}>
-                    {comic.penciler}
-                  </span>
-                </div>
-              ) : (
-                ""
-              )}
-              <img className={classes["background-img"]} src={comic.image} />
-            </Link>
+            <ComicsSlideritem
+              image={comic.image}
+              comicName={comic.comicName}
+              published={comic.published}
+              writer={comic.writer}
+              penciler={comic.penciler}
+              id={comic.id}
+            />
           </SwiperSlide>
         ))}
       </Swiper>
+
       {/* MID SCREEN */}
       <Swiper
         slidesPerView={2}
@@ -256,52 +209,18 @@ const ComicsSlider = () => {
       >
         {SLIDER_DATA.map((comic) => (
           <SwiperSlide key={comic.id}>
-            <Link
-              to={`/comics/${comic.id}`}
-              className={classes["deatured-comics-a"]}
-            >
-              <h2
-                className={`${classes["content"]} ${classes["comic-heading"]}`}
-              >
-                {comic.comicName}
-              </h2>
-
-              <div
-                className={`${classes["content"]} ${classes["releasedate"]}`}
-              >
-                <span className={classes["inner-cntent-desc"]}>
-                  Release date:{" "}
-                </span>
-                <span className={classes["inner-cntent"]}>
-                  {comic.published}
-                </span>
-              </div>
-
-              <div
-                className={`${classes["content"]} ${classes["writer-name"]}`}
-              >
-                <span className={classes["inner-cntent-desc"]}>Writer: </span>
-                <span className={classes["inner-cntent"]}>{comic.writer}</span>
-              </div>
-
-              {comic.penciler !== "" ? (
-                <div className={`${classes["content"]} ${classes["penciler"]}`}>
-                  <span className={classes["inner-cntent-desc"]}>
-                    Penciler:{" "}
-                  </span>
-                  <span className={classes["inner-cntent"]}>
-                    {comic.penciler}
-                  </span>
-                </div>
-              ) : (
-                ""
-              )}
-
-              <img className={classes["background-img"]} src={comic.image} />
-            </Link>
+            <ComicsSlideritem
+              image={comic.image}
+              comicName={comic.comicName}
+              published={comic.published}
+              writer={comic.writer}
+              penciler={comic.penciler}
+              id={comic.id}
+            />
           </SwiperSlide>
         ))}
       </Swiper>
+
       {/* SMALL SCREEN */}
       <Swiper
         slidesPerView={1}
@@ -317,49 +236,14 @@ const ComicsSlider = () => {
       >
         {SLIDER_DATA.map((comic) => (
           <SwiperSlide key={comic.id}>
-            <Link
-              to={`/comics/${comic.id}`}
-              className={classes["deatured-comics-a"]}
-            >
-              <h2
-                className={`${classes["content"]} ${classes["comic-heading"]}`}
-              >
-                {comic.comicName}
-              </h2>
-
-              <div
-                className={`${classes["content"]} ${classes["releasedate"]}`}
-              >
-                <span className={classes["inner-cntent-desc"]}>
-                  Release date:{" "}
-                </span>
-                <span className={classes["inner-cntent"]}>
-                  {comic.published}
-                </span>
-              </div>
-
-              <div
-                className={`${classes["content"]} ${classes["writer-name"]}`}
-              >
-                <span className={classes["inner-cntent-desc"]}>Writer: </span>
-                <span className={classes["inner-cntent"]}>{comic.writer}</span>
-              </div>
-
-              {comic.penciler !== "" ? (
-                <div className={`${classes["content"]} ${classes["penciler"]}`}>
-                  <span className={classes["inner-cntent-desc"]}>
-                    Penciler:{" "}
-                  </span>
-                  <span className={classes["inner-cntent"]}>
-                    {comic.penciler}
-                  </span>
-                </div>
-              ) : (
-                ""
-              )}
-
-              <img className={classes["background-img"]} src={comic.image} />
-            </Link>
+            <ComicsSlideritem
+              image={comic.image}
+              comicName={comic.comicName}
+              published={comic.published}
+              writer={comic.writer}
+              penciler={comic.penciler}
+              id={comic.id}
+            />
           </SwiperSlide>
         ))}
       </Swiper>

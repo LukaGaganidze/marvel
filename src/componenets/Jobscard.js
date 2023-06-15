@@ -1,7 +1,9 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React, { useState } from "react";
+import { Link, useNavigation } from "react-router-dom";
 
 import classes from "./Jobscard.module.css";
+
+import LoadingSpinner from "../assets/svg/LoadingSpinnerWhite";
 
 // COMICS JOB IMGS
 import writer from "../assets/comics-page/jobs/writer.jpg";
@@ -11,16 +13,41 @@ import inker from "../assets/comics-page/jobs/inker.jpg";
 import penciler from "../assets/comics-page/jobs/penciler.jpg";
 import leterrer from "../assets/comics-page/jobs/leterrer.jpg";
 import painter from "../assets/comics-page/jobs/painter.jpg";
+import artist from "../assets/comics-page/jobs/artist.jpg";
 
 const Jobscard = ({ name, id, role }) => {
+  // LOADING STATE SPINNER
+  const { state } = useNavigation();
+  const [cardWasClickeed, setCardWasClicked] = useState(false);
+  const cardClickHandler = () => {
+    setCardWasClicked(true);
+  };
+  const cardLoadingState = state === "loading" && cardWasClickeed;
   const optionalRole = role.split(" ")[0];
   return (
-    <Link to={id} className={classes["role-card"]}>
+    <Link
+      onClick={cardClickHandler}
+      to={id}
+      className={`${classes["role-card"]} ${
+        classes[cardLoadingState ? "active-card" : ""]
+      }`}
+    >
+      {/* LOADING SPINNER */}
+      <div className={classes["loading-spinner"]}>
+        {cardLoadingState && <LoadingSpinner />}
+      </div>
       {/* writer */}
       {optionalRole === "writer" && (
         <div className={classes["img-box"]}>
           <h3 className={classes["role"]}>{role}</h3>
           <img className={classes["role-img"]} src={writer} />
+        </div>
+      )}
+      {/* artist */}
+      {optionalRole === "artist" && (
+        <div className={classes["img-box"]}>
+          <h3 className={classes["role"]}>{role}</h3>
+          <img className={classes["role-img"]} src={artist} />
         </div>
       )}
 

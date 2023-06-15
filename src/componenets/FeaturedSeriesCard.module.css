@@ -1,6 +1,20 @@
 .FeaturedSeriesCard {
   transition: all 0.4s;
 }
+/* LOADING SPINNER */
+.loading-spinner {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  top: 30%;
+  transform: translate(-50%, -50%);
+}
+.card-loading-state {
+  transform: translateY(-1.5rem);
+}
+.card-loading-state .img-box img {
+  filter: brightness(50%);
+}
 
 .FeaturedSeriesCard:link,
 .FeaturedSeriesCard:visited {
@@ -22,6 +36,7 @@
   width: 20rem;
   height: 15.8rem;
   overflow: hidden;
+  position: relative;
 }
 .img-box img {
   width: 100%;

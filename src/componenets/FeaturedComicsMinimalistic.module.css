@@ -1,6 +1,22 @@
 .comic-link {
   transition: all 0.4s;
+  position: relative;
 }
+
+/* LOADING SPINNER */
+.loading-spinner {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -100%);
+}
+.card-loading-state {
+  color: var(--white-1) !important;
+  background-color: var(--main-color-pink);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+}
+
+/*  */
 
 .comic-link:link,
 .comic-link:visited {

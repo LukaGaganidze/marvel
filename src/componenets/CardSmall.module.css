@@ -1,22 +1,40 @@
-/* .creators-z-text-box {
-  width: 50rem;
-  background-image: linear-gradient(
-      to bottom,
-      rgba(230, 230, 230, 0.9),
-      rgba(230, 230, 230, 0.9)
-    ),
-    url("../../assets/covers/cover-6.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
+.creator-cards-link {
+  transition: all 0.4s;
+  height: 33.8rem;
+  overflow: hidden;
+  position: relative;
+}
+.creator-cards-link:link,
+.creator-cards-link:visited {
+  display: block;
+  text-decoration: none;
+  font-family: inherit;
+}
+.creator-cards-link:hover,
+.creator-cards-link:active {
+  transform: translateY(-0.6rem) scale(1.03);
+}
 
+/* LOADING SPINNER */
 
-} */
+.card-loading-state {
+  transform: translateY(-0.6rem) scale(1.03);
+}
+.card-loading-state .card-smimg {
+  filter: brightness(50%);
+}
+
+.loading-spinner {
+  position: absolute;
+  z-index: 100;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
 
 .card-sml {
   width: 20rem;
   clip-path: polygon(0 7%, 100% 0, 100% 93%, 0 100%);
-  padding-bottom: 3rem;
 }
 .card-smimg-box {
   width: 20rem;

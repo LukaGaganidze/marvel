@@ -3,6 +3,8 @@ import { Link } from "react-router-dom";
 import { MagnifyingGlass } from "../../assets/svg/MagnifyingGlass";
 import MD5 from "crypto-js/md5";
 
+import LoadingCircleMainPinkC from "../../assets/svg/LoadingCircleMainPinkC";
+
 import classes from "./SearchSeries.module.css";
 
 const apiURL = process.env.REACT_APP_MARVEL_BASE_URL;
@@ -10,6 +12,11 @@ const DUMMY_APLH_STR = "A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y";
 const DUMMY_ALPH_ARR = DUMMY_APLH_STR.split(",");
 
 const SearchSeries = ({ fetchedData }) => {
+  // LOADING SPINNER UI
+  const [loadingSeries, setLoadingSeries] = useState(false);
+  const [formWasSubbed, setFormWasSubbed] = useState(false);
+  const [letterWasClicked, setLetterWasClicked] = useState(false);
+
   // DATA FETCHING
   const ref = useRef();
   const [input, setInput] = useState("");
@@ -22,10 +29,12 @@ const SearchSeries = ({ fetchedData }) => {
     )
       return;
     setInput(ref.current.value);
+    setFormWasSubbed(true);
   };
 
   useEffect(() => {
     if (input === "" || input.length === 0) return;
+    setLoadingSeries(true);
 
     const fetchData = async () => {
       const getHash = (timeStamp, privatKey, publicKey) => {
@@ -41,6 +50,8 @@ const SearchSeries = ({ fetchedData }) => {
 
       try {
         const response = await fetch(url);
+        if (response.ok) setLoadingSeries(false);
+
         const data = await response.json();
         console.log(data);
         fetchedData(data.data.results);
@@ -54,9 +65,18 @@ const SearchSeries = ({ fetchedData }) => {
 
   const searchByLettersHandler = (e) => {
     setInput(e.target.textContent);
+    setLetterWasClicked(true);
   };
+
+  // SPINNER STATE
+  const spinnerCircleActive =
+    (loadingSeries && formWasSubbed) || (loadingSeries && letterWasClicked);
+
   return (
     <div className={classes["search-bar-sec"]}>
+      <div className={classes["loading-spinner-pink"]}>
+        {spinnerCircleActive && <LoadingCircleMainPinkC />}
+      </div>
       {/* heading */}
       <div className={`${classes["heading"]}`}>
         <h2>

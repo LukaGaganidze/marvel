@@ -1,6 +1,9 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigation } from "react-router-dom";
 
 import classes from "./CreatorsSearchCard.module.css";
+
+import LoadingSpinnerPink from "../assets/svg/LoadingSpinnerPink";
+import { useState } from "react";
 
 const CreatorsSearchCard = ({
   id,
@@ -10,12 +13,23 @@ const CreatorsSearchCard = ({
   series,
   stories,
 }) => {
+  const { state } = useNavigation();
+  const [cardWasclicked, setCardWasClicked] = useState(false);
+  const cardClickHandler = () => setCardWasClicked(true);
+  const cardLoadingState = state === "loading" && cardWasclicked;
+
   return (
     <Link
+      onClick={cardClickHandler}
       to={`/creators/${id}`}
       id={id}
-      className={classes["creators-search-results-card"]}
+      className={`${classes["creators-search-results-card"]} ${
+        classes[cardLoadingState ? "card-loading-state" : ""]
+      }`}
     >
+      <div className={classes["loading-spinner"]}>
+        {cardLoadingState && <LoadingSpinnerPink />}
+      </div>
       <div className={classes["cr-text-box"]}>
         <div className={classes["name-box"]}>
           <h3 className={classes["cr-inner-headings"]}> Creator's Name</h3>

@@ -4,12 +4,20 @@ import MD5 from "crypto-js/md5";
 
 import classes from "./SearchForComic.module.css";
 
+import LoadingCircel from "../../assets/svg/LoadingCircle";
+
 const apiURL = process.env.REACT_APP_MARVEL_BASE_URL;
 
 const DUMMY_APLH_STR = "A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y";
 const DUMMY_ALPH_ARR = DUMMY_APLH_STR.split(",");
 
 const SearchForComic = ({ dataSetter }) => {
+  // LOADING SPINNER
+  // LOADING SPINNER UI
+  const [loadingComics, setLoadingComics] = useState(false);
+  const [formWasSubbed, setFormWasSubbed] = useState(false);
+  const [letterWasClicked, setLetterWasClicked] = useState(false);
+
   // INTERSECTION OBSERVER
   const [searchbarIsVisible, setsearchbarIsVisible] = useState(false);
   const componenetRef = useRef(null);
@@ -51,10 +59,12 @@ const SearchForComic = ({ dataSetter }) => {
       return;
 
     setInput(searchInp.current.value);
+    setFormWasSubbed(true);
   };
 
   useEffect(() => {
     if (input === "" || input.length === 0) return;
+    setLoadingComics(true);
 
     const fetchData = async () => {
       const getHash = (timeStamp, privatKey, publicKey) => {
@@ -71,6 +81,8 @@ const SearchForComic = ({ dataSetter }) => {
 
       try {
         const response = await fetch(url);
+        if (response.ok) setLoadingComics(false);
+
         const data = await response.json();
 
         dataSetter(data.data.results);
@@ -85,7 +97,12 @@ const SearchForComic = ({ dataSetter }) => {
 
   const searchWithLettersHandler = (e) => {
     setInput(e.target.textContent);
+    setLetterWasClicked(true);
   };
+
+  // SPINNER STATE
+  const spinnerCircleActive =
+    (loadingComics && formWasSubbed) || (loadingComics && letterWasClicked);
 
   return (
     <div
@@ -94,6 +111,11 @@ const SearchForComic = ({ dataSetter }) => {
         classes[searchbarIsVisible ? "active" : ""]
       }`}
     >
+      {/* LOADING SPINNER */}
+      <div className={classes["loading-circle-spinnner"]}>
+        {spinnerCircleActive && <LoadingCircel />}
+      </div>
+      {/* FORM */}
       <form onSubmit={submitHandler} className={classes["search-bar"]}>
         <div className={classes["heading-navigation"]}>
           <h2 className={classes["search-bar-heading"]}>

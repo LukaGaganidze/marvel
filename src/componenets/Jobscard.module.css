@@ -8,8 +8,26 @@
   border-radius: 0.5rem;
   overflow: hidden;
   box-shadow: 0 5px 25px rgba(0, 0, 0, 0.3);
+  position: relative;
 }
 
+.loading-spinner {
+  position: absolute;
+  z-index: 100;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 3rem;
+}
+
+.active-card .role-img,
+.active-card .role-img {
+  opacity: 0.4;
+}
+.active-card .role,
+.active-cardive .role {
+  color: var(--white-1);
+  transform: scale(1.1) translate(-45%, -50%);
+}
 /* IMG BOX */
 .img-box {
   position: relative;
@@ -58,4 +76,10 @@
 }
 .name {
   letter-spacing: 0.5px;
+}
+
+@media (max-width: 650px) {
+  .loading-spinner {
+    transform: translateX(-50%) scale(0.5);
+  }
 }

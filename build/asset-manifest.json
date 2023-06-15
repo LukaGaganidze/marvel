@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.a0d3dceb.css",
-    "main.js": "/static/js/main.e06e8458.js",
+    "main.css": "/static/css/main.1ff5b984.css",
+    "main.js": "/static/js/main.180e072e.js",
     "static/media/marvel-intro.mp4": "/static/media/marvel-intro.105c7408c0eda5e5cb44.mp4",
     "static/media/assamble-2.jpg": "/static/media/assamble-2.aefb3fd3b39074e7759a.jpg",
     "static/media/background.jpg": "/static/media/background.5b73418c72b6dc36af82.jpg",
@@ -48,6 +48,7 @@
     "static/media/comic8.jpg": "/static/media/comic8.7e93a8d9e35885ce85a2.jpg",
     "static/media/thor.jpg": "/static/media/thor.d32f642989863772b714.jpg",
     "static/media/strange.jpg": "/static/media/strange.443f677d7f8f80439527.jpg",
+    "static/media/artist.jpg": "/static/media/artist.b98bb1c516f2a183f847.jpg",
     "static/media/deadpool-cr.jpg": "/static/media/deadpool-cr.2f5efeddd5f23d1567c7.jpg",
     "static/media/logov3.jpg": "/static/media/logov3.01484c582ef29f23d698.jpg",
     "static/media/deadpool.jpg": "/static/media/deadpool.1046f46da22869defcea.jpg",
@@ -70,11 +71,11 @@
     "static/media/writer.jpg": "/static/media/writer.bcfdf04bc97d5e408e1d.jpg",
     "static/media/swiper-react.png": "/static/media/swiper-react.f05d768f2fba14bce360.png",
     "index.html": "/index.html",
-    "main.a0d3dceb.css.map": "/static/css/main.a0d3dceb.css.map",
-    "main.e06e8458.js.map": "/static/js/main.e06e8458.js.map"
+    "main.1ff5b984.css.map": "/static/css/main.1ff5b984.css.map",
+    "main.180e072e.js.map": "/static/js/main.180e072e.js.map"
   },
   "entrypoints": [
-    "static/css/main.a0d3dceb.css",
-    "static/js/main.e06e8458.js"
+    "static/css/main.1ff5b984.css",
+    "static/js/main.180e072e.js"
   ]
 }

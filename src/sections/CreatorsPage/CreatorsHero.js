@@ -170,13 +170,12 @@ const CreatorsHero = () => {
             <ul className={classes["creator-cards"]}>
               {DEADPOOL_DAT.map((el) => (
                 <li key={el.fullName}>
-                  <Link to={el.link} className={classes["creator-cards-link"]}>
-                    <CardSmall
-                      image={el.image}
-                      fullName={el.fullName}
-                      desc={el.desc}
-                    />
-                  </Link>
+                  <CardSmall
+                    link={el.link}
+                    image={el.image}
+                    fullName={el.fullName}
+                    desc={el.desc}
+                  />
                 </li>
               ))}
             </ul>
@@ -211,13 +210,12 @@ const CreatorsHero = () => {
             <ul className={classes["creator-cards"]}>
               {SPIDER_DAT.map((el) => (
                 <li key={el.fullName}>
-                  <Link to={el.link} className={classes["creator-cards-link"]}>
-                    <CardSmall
-                      image={el.image}
-                      fullName={el.fullName}
-                      desc={el.desc}
-                    />
-                  </Link>
+                  <CardSmall
+                    link={el.link}
+                    image={el.image}
+                    fullName={el.fullName}
+                    desc={el.desc}
+                  />
                 </li>
               ))}
             </ul>
@@ -259,13 +257,12 @@ const CreatorsHero = () => {
             <ul className={classes["creator-cards"]}>
               {HULK_DAT.map((el) => (
                 <li key={el.fullName}>
-                  <Link to={el.link} className={classes["creator-cards-link"]}>
-                    <CardSmall
-                      image={el.image}
-                      fullName={el.fullName}
-                      desc={el.desc}
-                    />
-                  </Link>
+                  <CardSmall
+                    link={el.link}
+                    image={el.image}
+                    fullName={el.fullName}
+                    desc={el.desc}
+                  />
                 </li>
               ))}
             </ul>

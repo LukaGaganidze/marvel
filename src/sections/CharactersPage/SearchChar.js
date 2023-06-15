@@ -96,7 +96,6 @@ const SearchChar = (props) => {
     (loadingCharacters && formWasSubbed) ||
     (loadingCharacters && letterWasClicked);
 
-  console.log(spinnerCircleActive);
   return (
     <div
       ref={componenetRef}

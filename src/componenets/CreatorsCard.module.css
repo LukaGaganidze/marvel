@@ -58,6 +58,7 @@
   background-color: var(--main-color-black-rgba-light);
   color: var(--white-1);
   backface-visibility: hidden;
+  height: 9rem;
 }
 
 .card-heading-cr {

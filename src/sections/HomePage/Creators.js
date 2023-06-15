@@ -145,7 +145,6 @@ const Creators = () => {
               creations={el.creations}
               id={el.id}
             />
-            // <Link className={`${classes["creator-card-a"]}`}>
           ))}
         </div>
       </section>

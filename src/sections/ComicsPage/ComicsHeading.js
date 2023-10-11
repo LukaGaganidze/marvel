@@ -23,6 +23,7 @@ const ComicsHeading = () => {
         </span>
         <span className={classes["comics-heading-outer"]}>Comics</span>
       </h2>
+
       <h2 className={classes["optional-heading"]}>marvel comics</h2>
     </>
   );
